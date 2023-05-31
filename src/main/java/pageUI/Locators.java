@@ -8,8 +8,12 @@ public class Locators {
     public static final String ENTER_PASSWORD_PARTNER_ACCOUNT = "//*[@id='account_password']";
     public static final String LOGIN_PARTNER_BUTTON = "//button[@type='submit']";
 
+    public static final String SELECT_USE_RECOVERY_CODE = "//a[text()='Use a recovery code']";
+    public static final String ENTER_RECOVERY_CODE = "//input[@class='next-input']";
+    public static final String LOGIN_PARTNER_AFTER_ENTER_CODE_BUTTON = "//button[@type='submit']";
+
 //    SELECT PARTNER ACCOUNT
-    public static final String SELECT_PARTNER_ACCOUNTS = "//span[text()='VILH TESTING 01']/ancestor::a";
+    public static final String SELECT_PARTNER_ACCOUNTS = "//span[text()='FireApps Dev']/ancestor::a";
 
 //    CREATE STORE TEST
     public static final String SELECT_MENU_STORES_BUTTON = "//span[text()='Stores']/ancestor::a";
