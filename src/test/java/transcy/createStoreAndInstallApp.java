@@ -3,11 +3,15 @@ package transcy;
 import commons.AbstractPage;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.TransyPO;
 
@@ -23,27 +27,20 @@ public class createStoreAndInstallApp extends AbstractTest {
     String storeURL = "https://www.shopify.com/partners";
     String emailPartner = "vilh@fireapps.vn";
     String passwordPartner = "123321";
-    String recoverCode = "9898-746E-BCEF";
-
+    String recoverCode = "84D3-F13D-051B";
+    String storeName = "store test transcy";
 
     @BeforeTest
     public void beforeTest(){
         driver = getBrowserDriver("chrome");
-        transcyPage = PageGeneratorManager.getShopifyPage(driver);
-//        abstractPage = new AbstractPage(driver);
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
-//        WebDriverManager.firefoxdriver().setup();
-//        driver = new FirefoxDriver();
-//        WebDriverManager.edgedriver().setup();
-//        driver = new EdgeDriver();
+        transcyPage = PageGeneratorManager.getShopifyPage(driver);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
     }
-    @Test(invocationCount = 2)
-    public void Testcase01() throws InterruptedException {
+    @Test(invocationCount = 1)
+    public void LoginPartnerFireAppsDev() throws InterruptedException {
 //
 //        Login Partner Shopify
         log.info("Pre-condition: Login Partner Shopify");
@@ -52,54 +49,55 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 01: Press on Login Partner button");
         transcyPage.clickToLoginPartnerBtn();
-//        driver.findElement(By.xpath("//a[@href='https://partners.shopify.com/organizations']")).click();
 
         log.info("Step 02: Fill Email account Partner");
         transcyPage.inputToEmailAccountPartner(emailPartner);
-//        driver.findElement(By.xpath("//input[@type='email']")).sendKeys(emailPartner);
 
         log.info("Step 03: Press on Continue with Email button");
         Thread.sleep(5000);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
         transcyPage.clickToContinueWithEmailBtn();
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
 
 
         log.info("Step 02: Fill Password account Partner");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//*[@id='account_password']")).sendKeys(passwordPartner);
-
         transcyPage.inputTPasswordAccountPartner(passwordPartner);
 
         log.info("Step 04: Press on Login button");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
-
         transcyPage.clickToLoginBtn();
 
         log.info("Step 05: Press on Use a Recovery code button");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//a[text()='Use a recovery code']")).click();
-
         transcyPage.clickToUseARecoveryCodeBtn();
 
         log.info("Step 06: Fill Recovery code");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//input[@class='next-input']")).sendKeys(recoverCode);
-
         transcyPage.inputRecoveryCode(recoverCode);
 
         log.info("Step 07: Press on Login button");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
-
         transcyPage.clickToLoginPartnerAfterInputCodeBtn();
 
         log.info("Step 08: Press Partner button");
-//        Thread.sleep(5000);
-//        driver.findElement(By.xpath("//span[text()='FireApps Dev']/ancestor::a")).click();
-
         transcyPage.clickToSelectPartnerBtn();
+
+        Thread.sleep(5000);
+
+        log.info("Step 09: Press Stores menu");
+        transcyPage.selectMenuStoresBtn();
+
+        log.info("Step 10: Press Add Store button");
+        transcyPage.clickToAddStore();
+
+        log.info("Step 11: Press Create Development Store button");
+        transcyPage.clickToCreateDevelopmentStore();
+
+        log.info("Step 12: Select Store test and Build option");
+        transcyPage.selectOptionStoreTest();
+
+        log.info("Step 13: Fill Store name");
+        transcyPage.inputStoreName(storeName);
+
+        log.info("Step 13: Select Start with test data option");
+        transcyPage.selectOprionStartWithTestData();
+
+        log.info("Step 14: Press Create Development store button");
+        transcyPage.clickToDevelopmentStoreBtn();
 
 
 

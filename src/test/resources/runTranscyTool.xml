@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Login Partner Shopify" parallel="false">
+<suite name="Run Transcy Tool" parallel="false">
 
-
-    <test name="RUN ON CHROME UI">
-        <parameter name="browser" value="chrome" />
+    <test name="Run Transcy Tool">
         <classes>
             <class name="transcy.createStoreAndInstallApp" />
         </classes>

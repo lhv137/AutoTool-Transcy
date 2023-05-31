@@ -18,6 +18,14 @@ public class Locators {
 //    CREATE STORE TEST
     public static final String SELECT_MENU_STORES_BUTTON = "//span[text()='Stores']/ancestor::a";
     public static final String SECLECT_ADD_STORE_BUTTON = "//*[@id='AppFrameMain']/div/div/div[1]/div/div/div[2]/div[2]";
+    public static final String DROPDOWN_CLICK_DEVELOPMENT_STORE = "//span[text()='Create development store']/ancestor::a";
+    public static final String SELECT_OPTION_STORE_TEST = "//input[@id='PolarisRadioButton2']";
+    public static final String ENTER_STORE_NAME = "//input[@id='PolarisTextField3']";
+    public static final String SELECT_START_WITH_TEST_DATA = "//input[@id='PolarisRadioButton8']";
+    public static final String CREATE_DEVELOPEMENT_STORE_BUTTON = "//span[text()='Create development store']";
+
+
+
 //    public static final String DROPDOWN_STORE_INDUSTRY = "//select[@id='QuestionnaireSelect-store_industry']";
 //    public static final String DROPDOWN_DESCRIBES = "//select[@id='QuestionnaireSelect-which_best_describes_you']";
 //    public static final String NEXT_BUTTON = "//button[@aria-label='Next']";
