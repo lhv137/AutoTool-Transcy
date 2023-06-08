@@ -19,10 +19,33 @@ public class Locators {
     public static final String SELECT_MENU_STORES_BUTTON = "//span[text()='Stores']/ancestor::a";
     public static final String SECLECT_ADD_STORE_BUTTON = "//*[@id='AppFrameMain']/div/div/div[1]/div/div/div[2]/div[2]";
     public static final String DROPDOWN_CLICK_DEVELOPMENT_STORE = "//span[text()='Create development store']/ancestor::a";
-    public static final String SELECT_OPTION_STORE_TEST = "//input[@id='PolarisRadioButton2']";
+    public static final String FRAME_SHOPIFY_PAGE = "//*[@id='AppFrameMain']";
+    public static final String SELECT_OPTION_STORE_TEST = "//input[@value='test_store']";
     public static final String ENTER_STORE_NAME = "//input[@id='PolarisTextField3']";
     public static final String SELECT_START_WITH_TEST_DATA = "//input[@id='PolarisRadioButton8']";
     public static final String CREATE_DEVELOPEMENT_STORE_BUTTON = "//span[text()='Create development store']";
+
+//    LOGIN ADMIN TOOL + ADD STORE TEST
+    public static final String FILL_USERNAME_ADMIN_TOOL = "//input[@type='username']";
+    public static final String FILL_PASSWORD_ADMIN_TOOL = "//input[@type='password']";
+    public static final String ENTER_LOGIN_ADMIN_TOOL_BUTTON = "//button[@type='submit']";
+    public static final String CLICK_MANGE_TEST_STORE_BUTTON = "//span[text()='Manage Test Store']";
+    public static final String FILL_STORE_TEST_ADMIN_TOOL = "//input[@name='shopify_domain']";
+    public static final String CLICK_ADD_STORE_TEST_BUTTON = "//button[@type='submit']";
+
+//    INSTALL TRANSCY UAT
+
+    public static final String SELECT_MENU_APPS_BUTTON = "//span[text()='Apps']/ancestor::a";
+    public static final String SEARCH_TRANSCY_UAT_V4_APP = "//input[@type='text']";
+    public static final String SELECT_TRANSCY_UAT_V4_APP = "//a[text()='Transcy UAT V4']";
+    public static final String SELECT_STORE_BUTTON_TO_INSTALL_TRANSCY_APP = "//span[text()='Select store']/ancestor::a";
+    public static final String SEARCH_STORE_TO_INSTALL_TRANSCY_APP = "//input[@type='text']";
+    public static final String SELECT_STORE_TO_INSTALL_TRANSCY_APP = "//*[@id='StoresListItemName']/span";
+    public static final String CLICK_INSTALL_BUTTON_ON_MODAL = "//span[text()='Install']";
+
+
+
+
 
 
 

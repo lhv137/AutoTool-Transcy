@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
@@ -72,7 +73,6 @@ public class AbstractPage {
         element.sendKeys(textValue);
     }
 
-
     public void selectItemInDropdown(String locator, String valueItem) {
         select = new Select(driver.findElement(By.xpath(locator)));
         select.selectByVisibleText(valueItem);
@@ -103,9 +103,7 @@ public class AbstractPage {
 
     public boolean isElementDisplayed(String locator, String... values) {
         locator = String.format(locator, (Object[]) values);
-//        overideGlobalTimeout(shortTimeout);
         element = driver.findElement(By.xpath(locator));
-//        overideGlobalTimeout(longTimeout);
         return element.isDisplayed();
     }
 
@@ -129,7 +127,6 @@ public class AbstractPage {
             }
         }
     }
-
     public void waitToElementVisible(String locator) {
         by = By.xpath(locator);
         waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(midTimeout));
@@ -162,5 +159,15 @@ public class AbstractPage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void sendKeyBoardToElement(String locator, Keys key) {
+        element = driver.findElement(By.xpath(locator));
+        action.sendKeys(element, key).perform();
+    }
+
+    public int randomNumber(int boundNumber) {
+        Random random = new Random();
+        return random.nextInt(boundNumber);
     }
 }
