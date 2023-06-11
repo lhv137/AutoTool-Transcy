@@ -34,7 +34,7 @@ public class createStoreAndInstallApp extends AbstractTest {
     String emailPartner = "vilh@fireapps.vn";
     String passwordPartner1 = "Vile@12345";
     String passwordPartner = "123321";
-    String recoveryCode = "BA1B-9AA3-4330";
+    String recoveryCode = "9716-6562-7A3B";
     int number = new Random().nextInt(99999999);
 
 
@@ -67,69 +67,83 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 01: Press on Login Partner button");
         transcyPage.clickToLoginPartnerBtn();
+        Thread.sleep(3000);
 
         log.info("Step 02: Fill Email account Partner");
         transcyPage.inputToEmailAccountPartner(emailPartner);
+        Thread.sleep(3000);
 
         log.info("Step 03: Press on Continue with Email button");
         transcyPage.clickToContinueWithEmailBtn();
+        Thread.sleep(3000);
 
         log.info("Step 04: Fill Password account Partner");
         transcyPage.inputTPasswordAccountPartner(passwordPartner);
+        Thread.sleep(3000);
 
         log.info("Step 05: Press on Login button");
         transcyPage.clickToLoginBtn();
+        Thread.sleep(3000);
 
         log.info("Step 06: Press on Use a Recovery code button");
         transcyPage.clickToUseARecoveryCodeBtn();
+        Thread.sleep(3000);
 
         log.info("Step 07: Fill Recovery code");
         transcyPage.inputRecoveryCode(recoveryCode);
+        Thread.sleep(3000);
 
         log.info("Step 08: Press on Login button");
         transcyPage.clickToLoginPartnerAfterInputCodeBtn();
+        Thread.sleep(3000);
 
         log.info("Step 09: Press Partner button");
         transcyPage.clickToSelectPartnerBtn();
         Thread.sleep(5000);
+    }
 
-        log.info("Step 10: Press Stores menu");
-        Thread.sleep(3000);
+        @Test(priority = 2)
+        public void CreateStoreTest() throws InterruptedException {
+
+        log.info("Step 01: Press Stores menu");
         transcyPage.selectMenuStoresBtn();
+        Thread.sleep(3000);
 
-        log.info("Step 11: Press Add Store button");
+        log.info("Step 02: Press Add Store button");
         transcyPage.clickToAddStore();
+        Thread.sleep(3000);
 
-        log.info("Step 12: Press Create Development Store button");
+        log.info("Step 03: Press Create Development Store button");
         transcyPage.clickToCreateDevelopmentStore();
+        Thread.sleep(3000);
 
-        log.info("Step 13: Select Store test and Build option");
+        log.info("Step 04: Select Store test and Build option");
         transcyPage.selectOptionStoreTest();
         Thread.sleep(3000);
 
-        log.info("Step 14: Fill Store name");
+        log.info("Step 05: Fill Store name");
         transcyPage.inputStoreName(storeName);
         System.out.println("Store name:" + storeName);
         Thread.sleep(5000);
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("window.scrollBy(0,2000)");
 
-        log.info("Step 15: Select Start with test data option");
+        log.info("Step 06: Select Start with test data option");
         transcyPage.selectOprionStartWithTestData();
         Thread.sleep(5000);
 
-        log.info("Step 16: Press Create Development store button");
+        log.info("Step 07: Press Create Development store button");
         transcyPage.clickToAddDevelopmentStoreBtn();
-        Thread.sleep(15000);
+        Thread.sleep(20000);
 
-//        log.info("Step 17: Choose account to login");
+//        log.info("Step 08: Choose account to login");
 //        transcyPage.clickToChooseAccountBtn();
 //        Thread.sleep(10000);
 
     }
-        @Test(priority = 2)
+        @Test(priority = 3)
         public void AddStoreTestTranscy() throws InterruptedException {
-        String storeNameAdmin = storeName + "myshopify.com";
+        String storeNameAdmin = storeName + ".myshopify.com";
 
         log.info("Step 01: Go to Admin tool");
         driver.switchTo().newWindow(WindowType.TAB);
@@ -148,7 +162,7 @@ public class createStoreAndInstallApp extends AbstractTest {
         transcyPage.clickToLoginAdminToolBtn();
         Thread.sleep(5000);
 
-        log.info("Step 05: Login Admin tool");
+        log.info("Step 05: Go to Manage Test Store menu");
         transcyPage.clickToManageTestStoreBtn();
         Thread.sleep(5000);
 
@@ -167,10 +181,9 @@ public class createStoreAndInstallApp extends AbstractTest {
         Thread.sleep(5000);
     }
 
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void InstallTranscyAppUAT() throws InterruptedException {
         String storeDomain = ".myshopify.com";
-        String storeDomain1 = "storeratingstag3.myshopify.com";
         String storeTest = storeName + storeDomain;
         String recoveryCode1 = "C3E2-2575-BE34";
 
@@ -181,6 +194,7 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 02: Press on Login Partner button");
         transcyPage.clickToLoginPartnerBtn();
+        Thread.sleep(3000);
 
 //      DEMO VỚI PARTNER FIREAPPS DEV
 //
@@ -223,7 +237,7 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 05: Search Transcy UAT V4 App");
         transcyPage.searchAppTranscyUATV4(appName);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         log.info("Step 06: Click to select Transcy UAT V4 App");
         transcyPage.clickToSelectTranscyUATV4App();
@@ -239,7 +253,7 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 09: Select Store Domain to Install App");
         transcyPage.selectStoreDomainToInstallApp();
-        Thread.sleep(3000);
+        Thread.sleep(10000);
 
 //        log.info("Step 10: Click Choose Partner Account button");
 //        transcyPage.clickToChooseAccountPartnerBtn();
@@ -256,6 +270,10 @@ public class createStoreAndInstallApp extends AbstractTest {
         log.info("Step 13: Click to Swicher menu button");
         transcyPage.clickSwitcherMenuBtn();
         Thread.sleep(5000);
+    }
+
+    @Test(priority = 5)
+    public void CheckModalFirstTimeGoToMenuSwitcher() throws InterruptedException {
 
 //      MODAL CONTENT FIRST TIME LOGIN
 
@@ -277,4 +295,4 @@ public class createStoreAndInstallApp extends AbstractTest {
 //    public void quitBrowser() {
 //        closeBrowserAndDriver(driver);
 //    }
-}
+
