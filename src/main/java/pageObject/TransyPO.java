@@ -154,7 +154,7 @@ public class TransyPO extends AbstractPage {
         waitToElementVisible(Locators.SEARCH_TRANSCY_UAT_V4_APP);
         sendKeyToElement(Locators.SEARCH_TRANSCY_UAT_V4_APP, appName);
         sendKeyBoardToElement(Locators.SEARCH_TRANSCY_UAT_V4_APP, Keys.ENTER);
-        Thread.sleep(4000);
+        Thread.sleep(5000);
     }
     public void clickToSelectTranscyUATV4App() throws InterruptedException {
         waitToElementClickable((Locators.SELECT_TRANSCY_UAT_V4_APP));

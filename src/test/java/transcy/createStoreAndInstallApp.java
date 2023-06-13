@@ -61,35 +61,27 @@ public class createStoreAndInstallApp extends AbstractTest {
 
         log.info("Step 01: Press on Login Partner button");
         transcyPage.clickToLoginPartnerBtn();
-        Thread.sleep(3000);
 
         log.info("Step 02: Fill Email account Partner");
         transcyPage.inputToEmailAccountPartner(emailPartner);
-        Thread.sleep(3000);
 
         log.info("Step 03: Press on Continue with Email button");
         transcyPage.clickToContinueWithEmailBtn();
-        Thread.sleep(3000);
 
         log.info("Step 04: Fill Password account Partner");
         transcyPage.inputTPasswordAccountPartner(passwordPartner);
-        Thread.sleep(3000);
 
         log.info("Step 05: Press on Login button");
         transcyPage.clickToLoginBtn();
-        Thread.sleep(3000);
 
         log.info("Step 06: Press on Use a Recovery code button");
         transcyPage.clickToUseARecoveryCodeBtn();
-        Thread.sleep(3000);
 
         log.info("Step 07: Fill Recovery code");
         transcyPage.inputRecoveryCode(recoveryCode);
-        Thread.sleep(3000);
 
         log.info("Step 08: Press on Login button");
         transcyPage.clickToLoginPartnerAfterInputCodeBtn();
-        Thread.sleep(3000);
 
         log.info("Step 09: Press Partner button");
         transcyPage.clickToSelectPartnerBtn();
@@ -97,24 +89,16 @@ public class createStoreAndInstallApp extends AbstractTest {
     }
 
     @Test(priority = 2)
-    public void CreateStoreTestTranscy() throws InterruptedException {
-        Thread.sleep(5000);
-    }
-
-    @Test(priority = 2)
     public void CreateStoreTest() throws InterruptedException {
 
         log.info("Step 01: Press Stores menu");
         transcyPage.selectMenuStoresBtn();
-        Thread.sleep(3000);
 
         log.info("Step 02: Press Add Store button");
         transcyPage.clickToAddStore();
-        Thread.sleep(3000);
 
         log.info("Step 03: Press Create Development Store button");
         transcyPage.clickToCreateDevelopmentStore();
-        Thread.sleep(3000);
 
         log.info("Step 04: Select Store test and Build option");
         transcyPage.selectOptionStoreTest();
@@ -131,13 +115,11 @@ public class createStoreAndInstallApp extends AbstractTest {
         log.info("Step 07: Press Create Development store button");
         transcyPage.clickToAddDevelopmentStoreBtn();
 //        log.info("Step 17: Choose account to login");
-        Thread.sleep(20000);
 
 //        log.info("Step 08: Choose account to login");
 //        transcyPage.clickToChooseAccountBtn();
 //        Thread.sleep(10000);
     }
-
 
         @Test(priority = 3)
         public void AddStoreTestTranscy () throws InterruptedException {
@@ -185,7 +167,6 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             log.info("Step 02: Press on Login Partner button");
             transcyPage.clickToLoginPartnerBtn();
-            Thread.sleep(3000);
 
 //      DEMO VỚI PARTNER FIREAPPS DEV
 //
@@ -226,7 +207,6 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             log.info("Step 05: Search Transcy UAT V4 App");
             transcyPage.searchAppTranscyUATV4(appName);
-            Thread.sleep(5000);
 
             log.info("Step 06: Click to select Transcy UAT V4 App");
             transcyPage.clickToSelectTranscyUATV4App();
@@ -239,7 +219,6 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             log.info("Step 09: Select Store Domain to Install App");
             transcyPage.selectStoreDomainToInstallApp();
-            Thread.sleep(10000);
 
 //        log.info("Step 10: Click Choose Partner Account button");
 //        transcyPage.clickToChooseAccountPartnerBtn();
@@ -253,7 +232,6 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             log.info("Step 13: Click to Swicher menu button");
             transcyPage.clickSwitcherMenuBtn();
-            Thread.sleep(5000);
         }
 
         @Test(priority = 5)
