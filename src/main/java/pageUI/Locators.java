@@ -51,14 +51,47 @@ public class Locators {
     public static final String CLICK_CHOOSE_FREE_PLAN_BUTTON = "//span[text()='Get started']";
     public static final String CLICK_CHOOSE_BASIC_PLAN_BUTTON = "//span[text()='Get started']";
     public static final String SELECT_MENU_SWITCHER_BUTTON = "//span[text()='Switcher']";
+
+
+//  CONTENT MODAL SWITCHER
+
+//    BUTTON
     public static final String SELECT_NEXT_BUTTON_IN_MODAL = "//span[text()='Next']";
     public static final String SELECT_EXPLORE_NOW_BUTTON_IN_MODAL = "//span[text()='Explore now']";
     public static final String SELECT_CLOSE_BUTTON_IN_MODAL = "//button[@class='modal__close-button--default']";
+    public static final String SELECT_OK_DO_IT_LATER_BUTTON = "//span[text()='OK, I do it later']";
+    public static final String SELECT_ACTIVE_SWITCHER_BUTTON = "//span[text()='Activate Switcher now']";
+    public static final String FILTER_STORE_BUTTON = "//input[@type='text']";
+    public static final String LOGIN_STORE_BUTTON = "//button[@type='submit']";
+    public static final String APPS_STORE_BUTTON = "//span[text()='Apps']";
+    public static final String SELECT_APPS_TRANSCY_BUTTON = "//div[@class='OAwvw' and contains(text(),'Transcy UAT V4')]";
 
-//  CONTENT MODAL SWITCHER
-    public static final String CONTENT_TITLE = "//h2[@class='sc-2126ad3d-6 jxlOwl']";
-    public static final String CONTENT_TITLE_1 = "//h2[@class='Polaris-Heading' and contains(text(),'Activate Transcy Switcher')]";
-    public static final String CONTENT_DESCRIPTION = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Turn on Switcher visibility to activate Switcher on the store theme and display it on the storefront.')]";
+
+//    FIRST MODAL
+    public static final String CONTENT_TITLE_MODAL_FIRST = "//h2[@class='sc-2126ad3d-6 jxlOwl']";
+    public static final String CONTENT_HEADING_MODAL_1 = "//h2[@class='Polaris-Heading' and contains(text(),'Activate Transcy Switcher')]";
+    public static final String CONTENT_HEADING_MODAL_2 = "//h2[@class='Polaris-Heading' and contains(text(),'Choose or customize templates')]";
+    public static final String CONTENT_HEADING_MODAL_3 = "//h2[@class='Polaris-Heading' and contains(text(),'Publish switcher & preview')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_1 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Turn on Switcher visibility to activate Switcher on the store theme and display it on the storefront.')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_2 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Explore different template options or customize switcher that fits to your store.')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_3 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Complete decorating your store with Transcy Switcher!')]";
+
+//    SECOND MODAL
+    public static final String CONTENT_TITLE_MODAL_SECOND = "//h2[@class='sc-2126ad3d-6 jxlOwl']";
+    public static final String CONTENT_DESCRIPTION_MODAL_SECOND = "//*[@id='modal-root']/div/div[2]/div/div/div/div[1]";
+
+
+//    DEFAULT SETTING
+    public static final String HEADER_TITLE_CONTENT = "//h1[text()='Switcher settings']";
+    public static final String SUB_TITLE_CONTENT = "//div[@class='page-subtitle']";
+    public static final String GENERAL_TITLE_CONTENT = "(//span[@class='Polaris-Tabs__Title'][contains(.,'General')])[2]";
+    public static final String TEMPLATES_TITLE_CONTENT = "//*[@id='templates']";
+    public static final String GENERAL_TAB_CONTENT = "//div[@class='Polaris-Card__Section']";
+    public static final String SWITCHER_DISPLAY_TITLE = "//h2[text()='Switcher display']";
+    public static final String SWITCHER_DISPLAY_STATUS = "//button[@class='switch__slider']";
+    public static final String SWITCHER_DISPLAY_LABEL = "//label[text()='Switcher visibility']";
+
+
 
 
 

@@ -1,27 +1,19 @@
 package commons;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 
-import java.util.List;
-import java.util.Set;
 
 
 public class AbstractPage {
 
-    WebDriver driver;
+    static WebDriver driver;
     WebElement element;
     By by;
     Select select;
@@ -29,7 +21,7 @@ public class AbstractPage {
     WebDriverWait waitExplicit;
     Actions action;
     long shortTimeout = 3;
-    long midTimeout = 5;
+    static long midTimeout = 5;
     long longTimeout = 30;
 
     public AbstractPage(WebDriver driver) {
@@ -90,5 +82,17 @@ public class AbstractPage {
     public void sendKeyBoardToElement(String locator, Keys key) {
         element = driver.findElement(By.xpath(locator));
         action.sendKeys(element, key).perform();
+    }
+
+    public static String getElementText(By by) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(midTimeout));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        String text = driver.findElement(by).getText();
+        logConsole("Get text: " + text);
+        return text;
+    }
+
+    public static void logConsole(Object message) {
+        System.out.println(message);
     }
 }

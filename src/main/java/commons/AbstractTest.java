@@ -9,9 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.Assert;
 
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
+
+
 
 public class AbstractTest {
     private WebDriver driver;
@@ -106,5 +109,36 @@ public class AbstractTest {
         }
     }
 
-    
+    private boolean checkEquals(Object actual, Object expected) {
+        boolean pass = true;
+        boolean status;
+        try {
+            if (actual instanceof String && expected instanceof String) {
+                actual = actual.toString().trim();
+                log.info("Actual = " + actual);
+                expected = expected.toString().trim();
+                log.info("Expected = " + expected);
+                status = (actual.equals(expected));
+            } else {
+                status = (actual == expected);
+            }
+
+            if (status) {
+                log.info(" -------------------------- PASSED -------------------------- ");
+            } else {
+                log.info(" -------------------------- FAILED -------------------------- ");
+            }
+            Assert.assertEquals(actual, expected, "Value is not matching!");
+        } catch (Throwable e) {
+            pass = false;
+
+        }
+        return pass;
+    }
+
+    protected boolean verifyEquals(Object actual, Object expected) {
+        return checkEquals(actual, expected);
+    }
+
+
 }
