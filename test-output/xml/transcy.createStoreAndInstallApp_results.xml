@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="createStoreAndInstallApp"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="190.987">
+  <properties />
+  
+  
+            <testcase name="CheckSettingsDefaultSwitcher" time="190.987" classname="transcy.createStoreAndInstallApp" />
+      
+</testsuite>

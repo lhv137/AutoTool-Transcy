@@ -88,7 +88,7 @@ public class AbstractPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(midTimeout));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         String text = driver.findElement(by).getText();
-        logConsole("Get text: " + text);
+//        logConsole("Get text: " + text);
         return text;
     }
 

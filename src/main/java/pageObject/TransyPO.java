@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pageUI.Locators;
+import org.openqa.selenium.support.ui.Select;
+
+
 
 
 public class TransyPO extends AbstractPage {
@@ -235,7 +238,7 @@ public class TransyPO extends AbstractPage {
         }
         waitToElementClickable((Locators.APPS_STORE_BUTTON));
         clickToElement(Locators.APPS_STORE_BUTTON);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
     public void clickToLoginTranscyApp() throws InterruptedException {
         String winHandleBefore = driver.getWindowHandle();
@@ -244,40 +247,85 @@ public class TransyPO extends AbstractPage {
         Thread.sleep(5000);
     }
     public String getTextHeaderTitle(){
-        String getHeaderTitle = getElementText(By.xpath(Locators.HEADER_TITLE_CONTENT));
-        return getHeaderTitle ;
+        return getElementText(By.xpath(Locators.HEADER_TITLE_CONTENT));
     }
     public String getTextHeaderDescription(){
-        String getHeaderDes = getElementText(By.xpath(Locators.SUB_TITLE_CONTENT));
-        return getHeaderDes ;
+        return getElementText(By.xpath(Locators.SUB_TITLE_CONTENT));
     }
     public String getTextGeneralTitle(){
-        String getGeneralTitle = getElementText(By.xpath(Locators.GENERAL_TITLE_CONTENT));
-        return getGeneralTitle ;
+        return getElementText(By.xpath(Locators.GENERAL_TITLE_CONTENT));
     }
     public String getTextTabContent(){
-        String getTabContent = getElementText(By.xpath(Locators.GENERAL_TAB_CONTENT));
-        return getTabContent ;
+        return getElementText(By.xpath(Locators.GENERAL_TAB_CONTENT));
     }
     public String getSwitcherDisplayTitle(){
-        String SwitcherTitle = getElementText(By.xpath(Locators.SWITCHER_DISPLAY_TITLE));
-        return SwitcherTitle ;
+        return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_TITLE));
     }
     public boolean getSwitcherDisplayStatus(){
         String SwitcherStatus = getElementText(By.xpath(Locators.SWITCHER_DISPLAY_STATUS));
         return true;
     }
     public String getSwitcherDisplayLabel(){
-        String SwitcherLabel = getElementText(By.xpath(Locators.SWITCHER_DISPLAY_LABEL));
-        return SwitcherLabel;
+        return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_LABEL));
     }
-
+    public String getSwitcherDisplaySetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_SETTING));
+    }
+    public String getSwitcherDisplayNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_NOTE));
+    }
+    public String getSwitcherDisclosureTitle(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE));
+    }
+    public String getSwitcherDisclosureSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SETTING));
+    }
+    public String getGeolocationTitle(){
+        return getElementText(By.xpath(Locators.GEOLOCATION_TITLE));
+    }
+    public String getGeolocationDescription(){
+        return getElementText(By.xpath(Locators.GEOLOCATION_DESCRIPTION));
+    }
+    public String getBannerUpgradeContent(){
+        return getElementText(By.xpath(Locators.BANNER_UPGRADE));
+    }
+    public String getButtonUpgradeContent(){
+        return getElementText(By.xpath(Locators.BUTTON_UPGRADE_IN_BANNER));
+    }
+    public String getUnLockFeatureModalContent(){
+        return getElementText(By.xpath(Locators.TEXT_UNLOCK_FEATURE));
+    }
+    public String getButtonUnLockFeatureModalContent(){
+        return getElementText(By.xpath(Locators.BUTTON_UNLOCK_FEATURE));
+    }
     public void clickToTempalatesTab() throws InterruptedException {
         waitToElementClickable((Locators.TEMPLATES_TITLE_CONTENT));
         clickToElement(Locators.TEMPLATES_TITLE_CONTENT);
         Thread.sleep(5000);
     }
-
-
+    public String getActiveTemplateContent(){
+        return getElementText(By.xpath(Locators.ACTIVE_TEMPLATE_TITLE));
+    }
+    public String getDefaultTemplateContent(){
+        return getElementText(By.xpath(Locators.DEFAULT_TEMPLATE_CONTENT));
+    }
+    public String getStatusTemplateNote(){
+        return getElementText(By.xpath(Locators.STATUS_TEMPLATE_NOTE));
+    }
+    public String getTemplateButton(){
+        return getElementText(By.xpath(Locators.STATUS_TEMPLATE_BUTTON));
+    }
+    public String getTranscyTemplateContent(){
+        return getElementText(By.xpath(Locators.TRANSCY_TEMPLATES_TITLE));
+    }
+    public String getMoreItemsSettingContent(){
+        return getElementText(By.xpath(Locators.MORE_ITEMS_SETTING_TITLE));
+    }
+    public String getTranscyTemplateDefault(){
+        return getElementText(By.xpath(Locators.TRANSCY_TEMPLATE_DEFAULT));
+    }
+    public String getButtonTranscyTemplateDefault(){
+        return getElementText(By.xpath(Locators.TRANSCY_BUTTON_TEMPLATE_DEFAULT));
+    }
 
 }

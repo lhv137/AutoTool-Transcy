@@ -7,6 +7,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObject.TransyPO;
@@ -240,6 +241,15 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             String expectedTitle = "Manage switcher";
             String expectedTitle1 = "Activate Transcy Switcher";
+            String expectContentTitleModalFirst = "Switcher settings";
+            String expectContentHeadingModal1 = "Switcher settings";
+            String expectContentHeadingModal2 = "Switcher settings";
+            String expectContentHeadingModal3 = "Switcher settings";
+            String expectContentDescriptionModal1 = "Switcher settings";
+            String expectContentDescriptionModal2 = "Switcher settings";
+            String expectContentDescriptionModal3 = "Switcher settings";
+            String expectContentTitleModalSecond = "Switcher settings";
+            String expectContentDescriptionModalSecond = "Switcher settings";
 
             WebElement m = driver.findElement(By.xpath("//h2[@class='sc-2126ad3d-6 jxlOwl']"));
             System.out.println("Title:" + m.getText() + "-" + m.getCssValue("color"));
@@ -250,20 +260,12 @@ public class createStoreAndInstallApp extends AbstractTest {
 //        Assert.assertEquals(m1.getText(),expectedTitle1);
         }
         @Test(priority = 6)
-        public void CheckModalSwitcherFirstTimeLogin () throws InterruptedException {
+        public void CheckSettingsDefaultSwitcher () throws InterruptedException {
             String recoveryCode1 = "0C1F-40DE-7B7E";
             String email = "vilh+1@firegroup.io";
             String pass = "Vile@12345";
             String storeName = "arstoresandbox1.myshopify.com";
-            String expectContentTitleModalFirst = "Switcher settings";
-            String expectContentHeadingModal1 = "Switcher settings";
-            String expectContentHeadingModal2 = "Switcher settings";
-            String expectContentHeadingModal3 = "Switcher settings";
-            String expectContentDescriptionModal1 = "Switcher settings";
-            String expectContentDescriptionModal2 = "Switcher settings";
-            String expectContentDescriptionModal3 = "Switcher settings";
-            String expectContentTitleModalSecond = "Switcher settings";
-            String expectContentDescriptionModalSecond = "Switcher settings";
+
             String expectContentHeaderTitle = "Switcher settings";
             String expectContentSubTitle = "You’re setting template Default for the desktop version.";
             String expectContentGeneralTitle = "General";
@@ -273,15 +275,35 @@ public class createStoreAndInstallApp extends AbstractTest {
                     "To get set up faster, use this step-by-step instructions\n" +
                     "Publish at least one language or one currency\n" +
                     "Turn on the Switcher visibility";
+            String expectContentSwitcherDisplayTitle = "Switcher display";
+            String expectContentSwitcherDisplaySetting = "Only admin";
+            String expectContentSwitcherDisplayLabel = "Switcher visibility";
+            String expectContentSwitcherDisplayNote = "Only admin: You or visitors with admin access can preview the Switcher to check if it works correctly before going public.";
+            String expectContentSwitcherDisclosureTitle = "Switcher disclosure";
+            String expectContentSwitcherDisclosureSetting = "Dropdown";
+            String expectContentGeolocationTitle = "Geolocation";
+            String expectContentGeolocationDescription = "Supports Transcy Switcher only.";
+            String expectContentBlockPlan = "Upgrade to a higher plan to use this feature. Learn more";
+            String expectContentButtonBlockPlan = "Upgrade now";
+            String expectContentUnLockFeature = "To unlock feature, contact us to verify your store.";
+            String expectContentButtonUnLockFeature = "Contact us";
+            String expectContentActiveTemplateTitle = "Active template";
+            String expectContentDefaultTemplate = "Default";
+            String expectContentTemplateNote = "You are using this template.";
+            String expectContentTemplateButton = "Customize";
+            String expectContentTranscyTemplate = "Transcy’s templates";
+            String expectContentMoreItemsSetting = "More items";
+            String expectContentTranscyTemplateDefault = "Posh";
+            String expectContentTranscyTemplateButton = "Apply";
 
 
             log.info("Step 01: Login Partner Shopify");
             Thread.sleep(3000);
             driver.switchTo().newWindow(WindowType.TAB);
-            driver.get(partnerURL);
+            driver.get("https://admin.shopify.com/store/arstoresandbox1");
 
-            log.info("Step 02: Press on Login Partner button");
-            transcyPage.clickToLoginPartnerBtn();
+//            log.info("Step 02: Press on Login Partner button");
+//            transcyPage.clickToLoginPartnerBtn();
 
 //      DEMO VỚI PARTNER FIREAPPS DEV
 
@@ -296,6 +318,7 @@ public class createStoreAndInstallApp extends AbstractTest {
 
             log.info("Step 05: Press on Login button");
             transcyPage.clickToLoginBtn();
+            Thread.sleep(15000);
 
 //        log.info("Step 06: Press on Use a Recovery code button");
 //        transcyPage.clickToUseARecoveryCodeBtn();
@@ -306,23 +329,24 @@ public class createStoreAndInstallApp extends AbstractTest {
 //        log.info("Step 08: Press on Login button");
 //        transcyPage.clickToLoginPartnerAfterInputCodeBtn();
 
-            log.info("Step 09: Press Store menu");
-            transcyPage.selectMenuStoresBtn();
-
-            log.info("Step 10: Fitler Store name");
-            transcyPage.fitlerStoreToLogin(storeName);
-
-            log.info("Step 11: Click To Login Store");
-            transcyPage.clickToLoginStore();
-
-            log.info("Step 09: Press Partner button");
-            transcyPage.clickToChooseAccountBtn();
+//            log.info("Step 09: Press Store menu");
+//            transcyPage.selectMenuStoresBtn();
+//
+//            log.info("Step 10: Fitler Store name");
+//            transcyPage.fitlerStoreToLogin(storeName);
+//
+//            log.info("Step 11: Click To Login Store");
+//            transcyPage.clickToLoginStore();
+//
+//            log.info("Step 09: Press Partner button");
+//            transcyPage.clickToChooseAccountBtn();
 
             log.info("Step 12: Click To App menu");
             transcyPage.clickToAppsMenu();
 
             log.info("Step 13: Click To Login Transcy App");
             transcyPage.clickToLoginTranscyApp();
+            Thread.sleep(5000);
 
             log.info("Step 13: Click to Swicher menu button");
             transcyPage.clickSwitcherMenuBtn();
@@ -331,31 +355,163 @@ public class createStoreAndInstallApp extends AbstractTest {
             Assert.assertEquals(transcyPage.getTextHeaderTitle(), expectContentHeaderTitle);
             System.out.println("Actual result: " + transcyPage.getTextHeaderTitle());
             System.out.println("Expected result: " + expectContentHeaderTitle);
+            Thread.sleep(5000);
 
             log.info("Step 15: Verify Header Description  Content");
             Assert.assertEquals(transcyPage.getTextHeaderDescription(), expectContentSubTitle);
             System.out.println("Actual result: " + transcyPage.getTextHeaderDescription());
             System.out.println("Expected result: " + expectContentSubTitle);
+            Thread.sleep(5000);
 
 //        log.info("Step 16: Verify General Header Title");
-////        transcyPage.clickToTempalatesTab();
-////        WebElement selectText = driver.findElement(By.xpath("//*[@id='general-panel']/div/div/div/div[1]/div"));
-////        selectText.getText();
-////        System.out.println("Text is: " +selectText);
-////        Assert.assertEquals(transcyPage.getTextGeneralTitle(),expectContentGeneralTitle);
-//        System.out.println("Actual result: " + transcyPage.getTextGeneralTitle());
+//////        transcyPage.clickToTempalatesTab();
+//        WebElement selectText = driver.findElement(By.cssSelector(".Polaris-Tabs__Wrapper"));
+//        selectText.getText();
+//        System.out.println("Text is: " +selectText);
+//////        Assert.assertEquals(transcyPage.getTextGeneralTitle(),expectContentGeneralTitle);
+////        System.out.println("Actual result: " + transcyPage.getTextGeneralTitle());
 //        System.out.println("Expected result: " + expectContentGeneralTitle);
 
-//        log.info("Step 17: Verify General Tab Content");
-//        Assert.assertEquals(transcyPage.getTextTabContent(),expectContentGeneralTab);
-//        System.out.println("Actual result: " + transcyPage.getTextTabContent());
-//        System.out.println("Expected result: " + expectContentGeneralTab);
+            log.info("Step 17: Verify General Tab Content");
+            Assert.assertEquals(transcyPage.getTextTabContent(),expectContentGeneralTab);
+            System.out.println("Actual result: " + transcyPage.getTextTabContent());
+            System.out.println("Expected result: " + expectContentGeneralTab);
+            Thread.sleep(5000);
+
+            log.info("Step 18: Verify Switcher Display Title");
+            Assert.assertEquals(transcyPage.getSwitcherDisplayTitle(),expectContentSwitcherDisplayTitle);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisplayTitle());
+            System.out.println("Expected result: " + expectContentSwitcherDisplayTitle);
+            Thread.sleep(5000);
+
+            log.info("Step 19: Verify Switcher Visibility Status");
+            Assert.assertEquals(transcyPage.getSwitcherDisplayStatus(),true);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisplayStatus());
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Switcher Display Label");
+            Assert.assertEquals(transcyPage.getSwitcherDisplayLabel(),expectContentSwitcherDisplayLabel);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisplayLabel());
+            System.out.println("Expected result: " + expectContentSwitcherDisplayLabel);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Switcher Display Setting");
+            Assert.assertEquals(transcyPage.getSwitcherDisplaySetting(),expectContentSwitcherDisplaySetting);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisplaySetting());
+            System.out.println("Expected result: " + expectContentSwitcherDisplaySetting);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Switcher Display Note");
+            Assert.assertEquals(transcyPage.getSwitcherDisplayNote(),expectContentSwitcherDisplayNote);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisplayNote());
+            System.out.println("Expected result: " + expectContentSwitcherDisplayNote);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Switcher Diclosure Title");
+            Assert.assertEquals(transcyPage.getSwitcherDisclosureTitle(),expectContentSwitcherDisclosureTitle);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisclosureTitle());
+            System.out.println("Expected result: " + expectContentSwitcherDisclosureTitle);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Switcher Diclosure Setting");
+            Assert.assertEquals(transcyPage.getSwitcherDisclosureSetting(),expectContentSwitcherDisclosureSetting);
+            System.out.println("Actual result: " + transcyPage.getSwitcherDisclosureSetting());
+            System.out.println("Expected result: " + expectContentSwitcherDisclosureSetting);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Geolocation Title");
+            Assert.assertEquals(transcyPage.getGeolocationTitle(),expectContentGeolocationTitle);
+            System.out.println("Actual result: " + transcyPage.getGeolocationTitle());
+            System.out.println("Expected result: " + expectContentGeolocationTitle);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Geolocation Description");
+            Assert.assertEquals(transcyPage.getGeolocationDescription(),expectContentGeolocationDescription);
+            System.out.println("Actual result: " + transcyPage.getGeolocationDescription());
+            System.out.println("Expected result: " + expectContentGeolocationDescription);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Banner Upgrade");
+            Assert.assertEquals(transcyPage.getBannerUpgradeContent(),expectContentBlockPlan);
+            System.out.println("Actual result: " + transcyPage.getBannerUpgradeContent());
+            System.out.println("Expected result: " + expectContentBlockPlan);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Button Banner Upgrade");
+            Assert.assertEquals(transcyPage.getButtonUpgradeContent(),expectContentButtonBlockPlan);
+            System.out.println("Actual result: " + transcyPage.getButtonUpgradeContent());
+            System.out.println("Expected result: " + expectContentButtonBlockPlan);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Unlock Feature Content");
+            Assert.assertEquals(transcyPage.getUnLockFeatureModalContent(),expectContentUnLockFeature);
+            System.out.println("Actual result: " + transcyPage.getUnLockFeatureModalContent());
+            System.out.println("Expected result: " + expectContentUnLockFeature);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Button Unlock Feature Content");
+            Assert.assertEquals(transcyPage.getButtonUnLockFeatureModalContent(),expectContentButtonUnLockFeature);
+            System.out.println("Actual result: " + transcyPage.getButtonUnLockFeatureModalContent());
+            System.out.println("Expected result: " + expectContentButtonUnLockFeature);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Go to Templates Setting Tab");
+            transcyPage.clickToTempalatesTab();
+
+            log.info("Step 20: Verify Active Template Title");
+            Assert.assertEquals(transcyPage.getActiveTemplateContent(),expectContentActiveTemplateTitle);
+            System.out.println("Actual result: " + transcyPage.getActiveTemplateContent());
+            System.out.println("Expected result: " + expectContentActiveTemplateTitle);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Active Template Default");
+            Assert.assertEquals(transcyPage.getDefaultTemplateContent(),expectContentDefaultTemplate);
+            System.out.println("Actual result: " + transcyPage.getDefaultTemplateContent());
+            System.out.println("Expected result: " + expectContentDefaultTemplate);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Active Template Note");
+            Assert.assertEquals(transcyPage.getStatusTemplateNote(),expectContentTemplateNote);
+            System.out.println("Actual result: " + transcyPage.getStatusTemplateNote());
+            System.out.println("Expected result: " + expectContentTemplateNote);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Active Template Button");
+            Assert.assertEquals(transcyPage.getTemplateButton(),expectContentTemplateButton);
+            System.out.println("Actual result: " + transcyPage.getTemplateButton());
+            System.out.println("Expected result: " + expectContentTemplateButton);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Transcy Templates Title");
+            Assert.assertEquals(transcyPage.getTranscyTemplateContent(),expectContentTranscyTemplate);
+            System.out.println("Actual result: " + transcyPage.getTranscyTemplateContent());
+            System.out.println("Expected result: " + expectContentTranscyTemplate);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify More Items Setting");
+            Assert.assertEquals(transcyPage.getMoreItemsSettingContent(),expectContentMoreItemsSetting);
+            System.out.println("Actual result: " + transcyPage.getTranscyTemplateContent());
+            System.out.println("Expected result: " + expectContentMoreItemsSetting);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Transcy Templates Default");
+            Assert.assertEquals(transcyPage.getTranscyTemplateDefault(),expectContentTranscyTemplateDefault);
+            System.out.println("Actual result: " + transcyPage.getTranscyTemplateDefault());
+            System.out.println("Expected result: " + expectContentTranscyTemplateDefault);
+            Thread.sleep(5000);
+
+            log.info("Step 20: Verify Transcy Templates Button");
+            Assert.assertEquals(transcyPage.getButtonTranscyTemplateDefault(),expectContentTranscyTemplateButton);
+            System.out.println("Actual result: " + transcyPage.getButtonTranscyTemplateDefault());
+            System.out.println("Expected result: " + expectContentTranscyTemplateButton);
+            Thread.sleep(5000);
+
 
         }
 
-//    @AfterClass
-//    public void quitBrowser() {
-//        closeBrowserAndDriver(driver);
-//    }
+    @AfterClass
+    public void quitBrowser() {
+        closeBrowserAndDriver(driver);
+    }
     }
 

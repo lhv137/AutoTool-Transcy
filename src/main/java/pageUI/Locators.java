@@ -85,11 +85,34 @@ public class Locators {
     public static final String HEADER_TITLE_CONTENT = "//h1[text()='Switcher settings']";
     public static final String SUB_TITLE_CONTENT = "//div[@class='page-subtitle']";
     public static final String GENERAL_TITLE_CONTENT = "(//span[@class='Polaris-Tabs__Title'][contains(.,'General')])[2]";
-    public static final String TEMPLATES_TITLE_CONTENT = "//*[@id='templates']";
-    public static final String GENERAL_TAB_CONTENT = "//div[@class='Polaris-Card__Section']";
-    public static final String SWITCHER_DISPLAY_TITLE = "//h2[text()='Switcher display']";
+    public static final String GENERAL_TAB_CONTENT = "(//div[contains(@class,'Polaris-Card')])[3]";
+    public static final String SWITCHER_DISPLAY_TITLE = "//h2[contains(.,'Switcher display')]";
     public static final String SWITCHER_DISPLAY_STATUS = "//button[@class='switch__slider']";
     public static final String SWITCHER_DISPLAY_LABEL = "//label[text()='Switcher visibility']";
+    public static final String SWITCHER_DISPLAY_SETTING = "//button[contains(.,'Only admin')]";
+    public static final String SWITCHER_DISPLAY_NOTE = "(//span[@class='Polaris-TextStyle--variationSubdued'])[4]";
+    public static final String SWITCHER_DISCLOSURE = "//span[contains(.,'Switcher disclosure')]";
+    public static final String SWITCHER_DISCLOSURE_SETTING = "//span[contains(text(),'Dropdown')]";
+    public static final String GEOLOCATION_TITLE = "//h2[contains(.,'Geolocation')]";
+    public static final String GEOLOCATION_DESCRIPTION = "//span[normalize-space()='Supports Transcy Switcher only.']";
+    public static final String BANNER_UPGRADE = "//span[contains(.,'Upgrade to a higher plan to use this feature.')]";
+    public static final String BUTTON_UPGRADE_IN_BANNER = "//button[contains(.,'Upgrade now')]";
+    public static final String TEXT_UNLOCK_FEATURE = "//span[contains(text(),'To unlock feature, contact us to verify your store')]";
+    public static final String BUTTON_UNLOCK_FEATURE = "//span[contains(text(),'Contact us')]";
+    public static final String TEMPLATES_TITLE_CONTENT = "//*[@id='templates']";
+    public static final String ACTIVE_TEMPLATE_TITLE = "//h2[contains(.,'Active template')]";
+    public static final String DEFAULT_TEMPLATE_CONTENT = "//span[contains(text(),'Default')]";
+    public static final String STATUS_TEMPLATE_NOTE = "//span[normalize-space()='You are using this template.']";
+    public static final String STATUS_TEMPLATE_BUTTON = "//span[contains(text(),'Customize')]";
+    public static final String TRANSCY_TEMPLATES_TITLE = "//h2[contains(text(),'Transcy’s templates')]";
+    public static final String MORE_ITEMS_SETTING_TITLE = "//span[contains(text(),'More items')]";
+    public static final String TRANSCY_TEMPLATE_DEFAULT = "//h2[normalize-space()='Posh']";
+    public static final String TRANSCY_BUTTON_TEMPLATE_DEFAULT = "//span[contains(text(),'Apply')]";
+
+
+
+
+
 
 
 
