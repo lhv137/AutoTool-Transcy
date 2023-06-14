@@ -419,28 +419,28 @@ public class TransyPO extends AbstractPage {
         return getElementText(By.xpath(Locators.POSITIONS_TITLE_CONTENT));
     }
     public String getPreferenceTitleContent(){
-        return getElementText(By.xpath(Locators.PREFERENCE_TITLE_CONTENT));
+        return getElementText(By.xpath(Locators.POSITIONS_PREFERENCE_TITLE_CONTENT));
     }
     public String getPreferenceSettingType(){
-        return getElementText(By.xpath(Locators.PREFERENCE_SETTING_TYPE));
+        return getElementText(By.xpath(Locators.POSITIONS_PREFERENCE_SETTING_TYPE));
     }
     public String getPreferenceSettingPosition(){
-        return getElementText(By.xpath(Locators.PREFERENCE_SETTING_POSITION));
+        return getElementText(By.xpath(Locators.POSITIONS_PREFERENCE_SETTING_POSITION));
     }
     public String getOffsetTitleContent(){
-        return getElementText(By.xpath(Locators.OFFSET_TITLE_CONTENT));
+        return getElementText(By.xpath(Locators.POSITIONS_OFFSET_TITLE_CONTENT));
     }
     public String getOffsetSettingTop(){
-        return getAttribute(By.xpath(Locators.OFFSET_SETTING_TOP),"value");
+        return getAttribute(By.xpath(Locators.POSITIONS_OFFSET_SETTING_TOP),"value");
     }
     public String getOffsetSettingRight(){
-        return getAttribute(By.xpath(Locators.OFFSET_SETTING_RIGHT),"value");
+        return getAttribute(By.xpath(Locators.POSITIONS_OFFSET_SETTING_RIGHT),"value");
     }
     public String getSwitcherStyleTitleContent(){
         return getElementText(By.xpath(Locators.SWITCHER_STYLE_CONTENT_TITLE));
     }
     public String getSwitcherStyleWidthTitleContent(){
-        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CONTENT_WIDTH));
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_WIDTH_CONTENT_TITLE));
     }
     public String getSwitcherStyleSettingWidth(){
         return getElementText(By.xpath(Locators.SWITCHER_STYLE_WIDTH_SETTING));

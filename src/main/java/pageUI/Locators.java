@@ -87,6 +87,7 @@ public class Locators {
 
 
 //    DEFAULT SETTING
+//    GENERAL TAB
     public static final String HEADER_TITLE_CONTENT = "//h1[text()='Switcher settings']";
     public static final String SUB_TITLE_CONTENT = "//div[@class='page-subtitle']";
     public static final String GENERAL_TITLE_CONTENT = "(//span[@class='Polaris-Tabs__Title'][contains(.,'General')])[2]";
@@ -104,6 +105,8 @@ public class Locators {
     public static final String BUTTON_UPGRADE_IN_BANNER = "//button[contains(.,'Upgrade now')]";
     public static final String TEXT_UNLOCK_FEATURE = "//span[contains(text(),'To unlock feature, contact us to verify your store')]";
     public static final String BUTTON_UNLOCK_FEATURE = "//span[contains(text(),'Contact us')]";
+
+//    TEMPLATES TAB
     public static final String TEMPLATES_TITLE_CONTENT = "//*[@id='templates']";
     public static final String ACTIVE_TEMPLATE_TITLE = "//h2[contains(.,'Active template')]";
     public static final String DEFAULT_TEMPLATE_CONTENT = "//span[contains(text(),'Default')]";
@@ -113,16 +116,18 @@ public class Locators {
     public static final String MORE_ITEMS_SETTING_TITLE = "//span[contains(text(),'More items')]";
     public static final String TRANSCY_TEMPLATE_DEFAULT = "//h2[normalize-space()='Posh']";
     public static final String TRANSCY_BUTTON_TEMPLATE_DEFAULT = "//span[contains(text(),'Apply')]";
+
+//    CUSTOMIZATION TAB
     public static final String CUSTOMIZE_TITLE_CONTENT = "//*[@id='customization']";
     public static final String POSITIONS_TITLE_CONTENT = "//span[@class='Polaris-Button__Text'][contains(.,'Positions')]";
-    public static final String PREFERENCE_TITLE_CONTENT = "//span[contains(.,'Preference')]";
-    public static final String PREFERENCE_SETTING_TYPE = "//span[contains(text(),'Floating on page corner')]";
-    public static final String PREFERENCE_SETTING_POSITION = "//span[contains(text(),'Top-right')]";
-    public static final String OFFSET_TITLE_CONTENT = "//span[contains(text(),'Offset')]";
-    public static final String OFFSET_SETTING_TOP = "(//input[contains(@class,'Input--suffixed')])[1]";
-    public static final String OFFSET_SETTING_RIGHT = "(//input[contains(@class,'Input--suffixed')])[2]";
+    public static final String POSITIONS_PREFERENCE_TITLE_CONTENT = "//span[contains(.,'Preference')]";
+    public static final String POSITIONS_PREFERENCE_SETTING_TYPE = "//span[contains(text(),'Floating on page corner')]";
+    public static final String POSITIONS_PREFERENCE_SETTING_POSITION = "//span[contains(text(),'Top-right')]";
+    public static final String POSITIONS_OFFSET_TITLE_CONTENT = "//span[contains(text(),'Offset')]";
+    public static final String POSITIONS_OFFSET_SETTING_TOP = "(//input[contains(@class,'Input--suffixed')])[1]";
+    public static final String POSITIONS_OFFSET_SETTING_RIGHT = "(//input[contains(@class,'Input--suffixed')])[2]";
     public static final String SWITCHER_STYLE_CONTENT_TITLE = "//span[contains(text(),'Switcher style')]";
-    public static final String SWITCHER_STYLE_CONTENT_WIDTH = "//span[normalize-space()='Width']";
+    public static final String SWITCHER_STYLE_WIDTH_CONTENT_TITLE = "//span[normalize-space()='Width']";
     public static final String SWITCHER_STYLE_WIDTH_SETTING = "//span[contains(text(),'Auto')]";
     public static final String SWITCHER_STYLE_WIDTH_VALUE = "(//input[@autocomplete='off'])[1]";
     public static final String SWITCHER_STYLE_BORDER_CONTENT_TITLE = "//span[normalize-space()='Border']";
@@ -158,6 +163,14 @@ public class Locators {
     public static final String SWITCHER_STYLE_FLAG_STYLE_CONTENT_TITLE = "//span[normalize-space()='Flag style']";
     public static final String SWITCHER_STYLE_FLAG_STYLE_SETTING = "//span[contains(text(),'Rounded rectangle')]";
     public static final String SWITCHER_STYLE_FLAG_STYLE = "//span[contains(text(),'Small')]";
+    public static final String SWITCHER_DISCLOSURE_CONTENT_TITLE = "//span[contains(text(),'Switcher disclosure style')]";
+    public static final String SWITCHER_DISCLOSURE_WIDTH_CONTENT_TITLE = "(//span[contains(.,'Width')])[1]";
+    public static final String SWITCHER_DISCLOSURE_WIDTH_SETTING = "(//span[contains(.,'Auto')])[2]";
+    public static final String SWITCHER_DISCLOSURE_WIDTH_VALUE = "(//input[contains(@autocomplete,'off')])[1]";
+    public static final String SWITCHER_DISCLOSURE_BORDER_CONTENT_TITLE = "(//span[contains(.,'Border')])[1]";
+    public static final String SWITCHER_DISCLOSURE_BORDER_SETTING = "(//span[contains(.,'Rounded')])[2]";
+    public static final String SWITCHER_DISCLOSURE_BORDER_VALUE = "//span[@class='Polaris-Button__Text'][contains(.,'Thin')]";
+    public static final String SWITCHER_DISCLOSURE_ACTIVE_EFFECT_CONTENT_TITLE = "//span[contains(.,'Active effect')]";
 
 
 

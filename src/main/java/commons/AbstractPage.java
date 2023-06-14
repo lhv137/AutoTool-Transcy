@@ -25,7 +25,7 @@ public class AbstractPage {
     long longTimeout = 30;
 
     public AbstractPage(WebDriver driver) {
-        this.driver = driver;
+        AbstractPage.driver = driver;
         action = new Actions(driver);
     }
 
