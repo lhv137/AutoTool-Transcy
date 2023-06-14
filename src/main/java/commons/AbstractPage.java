@@ -91,6 +91,13 @@ public class AbstractPage {
 //        logConsole("Get text: " + text);
         return text;
     }
+    public static String getAttribute(By by, String attribute) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(midTimeout));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        String att = driver.findElement(by).getAttribute(attribute);
+//        logConsole("Get text: " + att);
+        return att;
+    }
 
     public static void logConsole(Object message) {
         System.out.println(message);

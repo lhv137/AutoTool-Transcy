@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run Test Method 1"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="64.493">
+  <properties />
+  
+  
+            <testcase name="LoginStorePartnerSandBoxAndGoToSwitcherMenu" time="64.493" classname="transcy.loginStoreSteps" />
+      
+</testsuite>
