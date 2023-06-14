@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Run Test" >
+    <test name="Run Test Method 1">
+        <classes>
+            <class name="transcy.loginStoreSteps">
+                <methods>
+                    <include name="LoginStorePartnerSandBoxAndGoToSwitcherMenu"/>
+                    <include name="VerifySwitcherSettingsDefaultCustomizationTab"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<!--    <test name="Run Test Method 2">-->
+<!--        <classes>-->
+<!--            <class name="transcy.createStoreAndInstallApp">-->
+<!--                <methods>-->
+<!--                    <include name="VerifySwitcherSettingsDefaultCustomizationTab"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+</suite>

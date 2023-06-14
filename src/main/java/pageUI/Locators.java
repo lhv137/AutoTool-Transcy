@@ -66,15 +66,20 @@ public class Locators {
     public static final String APPS_STORE_BUTTON = "//span[text()='Apps']";
     public static final String SELECT_APPS_TRANSCY_BUTTON = "//div[@class='OAwvw' and contains(text(),'Transcy UAT V4')]";
 
-
 //    FIRST MODAL
     public static final String CONTENT_TITLE_MODAL_FIRST = "//h2[@class='sc-2126ad3d-6 jxlOwl']";
     public static final String CONTENT_HEADING_MODAL_1 = "//h2[@class='Polaris-Heading' and contains(text(),'Activate Transcy Switcher')]";
     public static final String CONTENT_HEADING_MODAL_2 = "//h2[@class='Polaris-Heading' and contains(text(),'Choose or customize templates')]";
     public static final String CONTENT_HEADING_MODAL_3 = "//h2[@class='Polaris-Heading' and contains(text(),'Publish switcher & preview')]";
-    public static final String CONTENT_DESCRIPTION_MODAL_1 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Turn on Switcher visibility to activate Switcher on the store theme and display it on the storefront.')]";
-    public static final String CONTENT_DESCRIPTION_MODAL_2 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Explore different template options or customize switcher that fits to your store.')]";
-    public static final String CONTENT_DESCRIPTION_MODAL_3 = "//span[@class='Polaris-TextStyle--variationSubdued' and contains(text(),'Complete decorating your store with Transcy Switcher!')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_1 = "//span[contains(text(),'Turn on Switcher visibility to activate Switcher o')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_2 = "//span[contains(.,'Explore different template options or customize switcher that fits to your store.')]";
+    public static final String CONTENT_DESCRIPTION_MODAL_3 = "//span[contains(.,'Complete decorating your store with Transcy Switcher!')]";
+    public static final String IMAGE_LINK_MODAL_1 = "//img[contains(@src,'1.4d4939b3.png')]";
+//    src="/_next/static/media/switcher_step_1.4d4939b3.png"
+    public static final String IMAGE_LINK_MODAL_2 = "//img[contains(@src,'2.c4b31408.png')]";
+//    src="/_next/static/media/switcher_step_2.c4b31408.png"
+    public static final String IMAGE_LINK_MODAL_3 = "//img[contains(@src,'3.6edca819.png')]";
+//    src="/_next/static/media/switcher_step_3.6edca819.png"
 
 //    SECOND MODAL
     public static final String CONTENT_TITLE_MODAL_SECOND = "//h2[@class='sc-2126ad3d-6 jxlOwl']";
@@ -108,6 +113,51 @@ public class Locators {
     public static final String MORE_ITEMS_SETTING_TITLE = "//span[contains(text(),'More items')]";
     public static final String TRANSCY_TEMPLATE_DEFAULT = "//h2[normalize-space()='Posh']";
     public static final String TRANSCY_BUTTON_TEMPLATE_DEFAULT = "//span[contains(text(),'Apply')]";
+    public static final String CUSTOMIZE_TITLE_CONTENT = "//*[@id='customization']";
+    public static final String POSITIONS_TITLE_CONTENT = "//span[@class='Polaris-Button__Text'][contains(.,'Positions')]";
+    public static final String PREFERENCE_TITLE_CONTENT = "//span[contains(.,'Preference')]";
+    public static final String PREFERENCE_SETTING_TYPE = "//span[contains(text(),'Floating on page corner')]";
+    public static final String PREFERENCE_SETTING_POSITION = "//span[contains(text(),'Top-right')]";
+    public static final String OFFSET_TITLE_CONTENT = "//span[contains(text(),'Offset')]";
+    public static final String OFFSET_SETTING_TOP = "(//input[contains(@class,'Input--suffixed')])[1]";
+    public static final String OFFSET_SETTING_RIGHT = "(//input[contains(@class,'Input--suffixed')])[2]";
+    public static final String SWITCHER_STYLE_CONTENT_TITLE = "//span[contains(text(),'Switcher style')]";
+    public static final String SWITCHER_STYLE_CONTENT_WIDTH = "//span[normalize-space()='Width']";
+    public static final String SWITCHER_STYLE_WIDTH_SETTING = "//span[contains(text(),'Auto')]";
+    public static final String SWITCHER_STYLE_WIDTH_VALUE = "(//input[@autocomplete='off'])[1]";
+    public static final String SWITCHER_STYLE_BORDER_CONTENT_TITLE = "//span[normalize-space()='Border']";
+    public static final String SWITCHER_STYLE_BORDER_SETTING = "//span[@class='Polaris-Button__Text'][normalize-space()='Rounded']";
+    public static final String SWITCHER_STYLE_BORDER_STYLE = "//span[contains(text(),'Thin')]";
+    public static final String SWITCHER_STYLE_EFFECT_CONTENT_TITLE = "//span[normalize-space()='Effect']";
+    public static final String SWITCHER_STYLE_EFFECT_SETTING = "(//span[contains(.,'No shadow')])[2]";
+    public static final String SWITCHER_STYLE_HOVER_EFFECT_CONTENT_TITLE = "//span[normalize-space()='Hover and active effect']";
+    public static final String SWITCHER_STYLE_HOVER_EFFECT_SETTING = "(//span[contains(.,'No shadow')])[4]";
+    public static final String SWITCHER_STYLE_EFFECT_NOTE = "//span[contains(text(),'Add shadow effect to make the Switcher more lively')]";
+    public static final String SWITCHER_STYLE_LAYOUT_CONTENT_TITLE = "//span[normalize-space()='Layout']";
+    public static final String SWITCHER_STYLE_LAYOUT_SETTING = "//span[contains(text(),'Arrow and label')]";
+    public static final String SWITCHER_STYLE_ARROW_SEGMENT_CONTENT_TITLE = "//span[normalize-space()='Arrow segment']";
+    public static final String SWITCHER_STYLE_ARROW_SEGMENT_SETTING = "//span[contains(text(),'Chevron down icon')]";
+    public static final String SWITCHER_STYLE_ARROW_SEGMENT_LAYOUT = "(//span[@class='Polaris-Button__Text'][contains(.,'Regular')])[1]";
+    public static final String SWITCHER_STYLE_LABEL_SEGMENT_CONTENT_TITLE = "//span[normalize-space()='Label segment']";
+    public static final String SWITCHER_STYLE_LABEL_SEGMENT_SETTING = "//span[contains(text(),'Language and Currency')]";
+    public static final String SWITCHER_STYLE_LABEL_SEGMENT_NOTE = "//span[contains(text(),'Don’t want to convert price? Show only language.')]";
+    public static final String SWITCHER_STYLE_LANGUAGE_CONTENT_TITLE = "//span[normalize-space()='Language']";
+    public static final String SWITCHER_STYLE_LANGUAGE_CONTENT_SETTING = "//span[contains(text(),'English name and flag')]";
+    public static final String SWITCHER_STYLE_LANGUAGE_CHECKBOX = "(//input[@type='checkbox'])[1]";
+    public static final String SWITCHER_STYLE_LANGUAGE_CHECKBOX_CONTENT = "(//span[contains(.,'Flag goes first')])[1]";
+    public static final String SWITCHER_STYLE_CURRENCY_CONTENT_TITLE = "//span[normalize-space()='Currency']";
+    public static final String SWITCHER_STYLE_CURRENCY_CONTENT_SETTING = "//span[contains(text(),'Name, Symbol')]";
+    public static final String SWITCHER_STYLE_CURRENCY_CHECKBOX = "(//input[@type='checkbox'])[2]";
+    public static final String SWITCHER_STYLE_CURRENCY_CHECKBOX_CONTENT = "(//span[contains(.,'Flag goes first')])[2]";
+    public static final String SWITCHER_STYLE_DIVIDER_FORMAT_CONTENT_TITLE = "//span[normalize-space()='Divider format']";
+    public static final String SWITCHER_STYLE_DIVIDER_FORMAT_CONTENT_SETTING = "//span[contains(text(),'Language - Currency')]";
+    public static final String SWITCHER_STYLE_FONT_CONTENT_TITLE = "//span[normalize-space()='Font']";
+    public static final String SWITCHER_STYLE_FONT_SETTING = "(//input[contains(@type,'number')])[2]";
+    public static final String SWITCHER_STYLE_FONT_LAYOUT = "(//span[contains(.,'Regular')])[4]";
+    public static final String SWITCHER_STYLE_FONT_NOTE = "//span[contains(text(),'Other font properties will be inherited from your ')]";
+    public static final String SWITCHER_STYLE_FLAG_STYLE_CONTENT_TITLE = "//span[normalize-space()='Flag style']";
+    public static final String SWITCHER_STYLE_FLAG_STYLE_SETTING = "//span[contains(text(),'Rounded rectangle')]";
+    public static final String SWITCHER_STYLE_FLAG_STYLE = "//span[contains(text(),'Small')]";
 
 
 

@@ -1,12 +1,8 @@
 package pageObject;
 
 import commons.AbstractPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import pageUI.Locators;
-import org.openqa.selenium.support.ui.Select;
-
 
 
 
@@ -103,7 +99,7 @@ public class TransyPO extends AbstractPage {
     public void clickToAddDevelopmentStoreBtn() throws InterruptedException {
         waitToElementClickable(Locators.CREATE_DEVELOPMENT_STORE_BUTTON);
         clickToElement(Locators.CREATE_DEVELOPMENT_STORE_BUTTON);
-        Thread.sleep(20000);
+        Thread.sleep(40000);
     }
     public void clickToChooseAccountBtn() throws InterruptedException {
         for(String winHandle : driver.getWindowHandles()){
@@ -180,7 +176,7 @@ public class TransyPO extends AbstractPage {
     public void selectStoreDomainToInstallApp() throws InterruptedException {
         waitToElementClickable((Locators.SELECT_STORE_TO_INSTALL_TRANSCY_APP));
         clickToElement(Locators.SELECT_STORE_TO_INSTALL_TRANSCY_APP);
-        Thread.sleep(10000);
+        Thread.sleep(15000);
     }
     public void clickToChooseAccountPartnerBtn(){
         waitToElementClickable((Locators.CLICK_CHOOSE_ACCOUNT_TO_INSTALL));
@@ -189,14 +185,14 @@ public class TransyPO extends AbstractPage {
     public void clickToInstallTranscyV4AppBtn() throws InterruptedException {
         waitToElementClickable((Locators.CLICK_INSTALL_TRANSCY_UAT_V4_APP_BUTTON));
         clickToElement(Locators.CLICK_INSTALL_TRANSCY_UAT_V4_APP_BUTTON);
-        Thread.sleep(15000);
+        Thread.sleep(25000);
     }
     public void clickToChooseFreePlanTranscyV4AppBtn() throws InterruptedException {
         switchToFrameOrIframe(Locators.IFRAME_TRANSCY_UAT_V4_APP);
         waitToElementClickable((Locators.CLICK_CHOOSE_FREE_PLAN_BUTTON));
         clickToElement(Locators.CLICK_CHOOSE_FREE_PLAN_BUTTON);
         driver.switchTo().defaultContent();
-        Thread.sleep(10000);
+        Thread.sleep(15000);
     }
     public void clickSwitcherMenuBtn() throws InterruptedException {
         waitToElementClickable((Locators.SELECT_MENU_SWITCHER_BUTTON));
@@ -246,6 +242,60 @@ public class TransyPO extends AbstractPage {
         clickToElement(Locators.SELECT_APPS_TRANSCY_BUTTON);
         Thread.sleep(5000);
     }
+//  MODAL AFTER GO TO SWITCHER MENU
+    public String getContentTitleFirstModal(){
+        return getElementText(By.xpath(Locators.CONTENT_TITLE_MODAL_FIRST));
+    }
+    public String getContentHeadingModal1(){
+        return getElementText(By.xpath(Locators.CONTENT_HEADING_MODAL_1));
+    }
+    public String getContentHeadingModal2(){
+        return getElementText(By.xpath(Locators.CONTENT_HEADING_MODAL_2));
+    }
+    public String getContentHeadingModal3(){
+        return getElementText(By.xpath(Locators.CONTENT_HEADING_MODAL_3));
+    }
+    public String getContentDescriptionModal1(){
+        return getElementText(By.xpath(Locators.CONTENT_DESCRIPTION_MODAL_1));
+    }
+    public String getContentDescriptionModal2(){
+        return getElementText(By.xpath(Locators.CONTENT_DESCRIPTION_MODAL_2));
+    }
+    public String getContentDescriptionModal3(){
+        return getElementText(By.xpath(Locators.CONTENT_DESCRIPTION_MODAL_3));
+    }
+    public String getImageURLModal1(){
+        return getAttribute(By.xpath(Locators.IMAGE_LINK_MODAL_1),"src");
+    }
+    public String getImageURLModal2(){
+        return getAttribute(By.xpath(Locators.IMAGE_LINK_MODAL_2),"src");
+    }
+    public String getImageURLModal3(){
+        return getAttribute(By.xpath(Locators.IMAGE_LINK_MODAL_3),"src");
+    }
+    public String getContentTitleSecondModal(){
+        return getElementText(By.xpath(Locators.CONTENT_TITLE_MODAL_SECOND));
+    }
+    public String getContentDescriptionSecondModal(){
+        return getElementText(By.xpath(Locators.CONTENT_DESCRIPTION_MODAL_SECOND));
+    }
+    public void clickToNextButton() throws InterruptedException {
+        waitToElementClickable((Locators.SELECT_NEXT_BUTTON_IN_MODAL));
+        clickToElement(Locators.SELECT_NEXT_BUTTON_IN_MODAL);
+        Thread.sleep(5000);
+    }
+    public void clickToExploreNowButton() throws InterruptedException {
+        waitToElementClickable((Locators.SELECT_EXPLORE_NOW_BUTTON_IN_MODAL));
+        clickToElement(Locators.SELECT_EXPLORE_NOW_BUTTON_IN_MODAL);
+        Thread.sleep(5000);
+    }
+    public void clickToDoItLaterButton() throws InterruptedException {
+        waitToElementClickable((Locators.SELECT_OK_DO_IT_LATER_BUTTON));
+        clickToElement(Locators.SELECT_OK_DO_IT_LATER_BUTTON);
+        Thread.sleep(10000);
+    }
+
+//  GENERAL TAB
     public String getTextHeaderTitle(){
         return getElementText(By.xpath(Locators.HEADER_TITLE_CONTENT));
     }
@@ -266,38 +316,49 @@ public class TransyPO extends AbstractPage {
         return true;
     }
     public String getSwitcherDisplayLabel(){
+
         return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_LABEL));
     }
     public String getSwitcherDisplaySetting(){
+
         return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_SETTING));
     }
     public String getSwitcherDisplayNote(){
+
         return getElementText(By.xpath(Locators.SWITCHER_DISPLAY_NOTE));
     }
     public String getSwitcherDisclosureTitle(){
+
         return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE));
     }
     public String getSwitcherDisclosureSetting(){
         return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SETTING));
     }
     public String getGeolocationTitle(){
+
         return getElementText(By.xpath(Locators.GEOLOCATION_TITLE));
     }
     public String getGeolocationDescription(){
+
         return getElementText(By.xpath(Locators.GEOLOCATION_DESCRIPTION));
     }
     public String getBannerUpgradeContent(){
+
         return getElementText(By.xpath(Locators.BANNER_UPGRADE));
     }
     public String getButtonUpgradeContent(){
+
         return getElementText(By.xpath(Locators.BUTTON_UPGRADE_IN_BANNER));
     }
     public String getUnLockFeatureModalContent(){
+
         return getElementText(By.xpath(Locators.TEXT_UNLOCK_FEATURE));
     }
     public String getButtonUnLockFeatureModalContent(){
         return getElementText(By.xpath(Locators.BUTTON_UNLOCK_FEATURE));
     }
+
+//  TEMPLATES TAB
     public void clickToTempalatesTab() throws InterruptedException {
         waitToElementClickable((Locators.TEMPLATES_TITLE_CONTENT));
         clickToElement(Locators.TEMPLATES_TITLE_CONTENT);
@@ -328,4 +389,183 @@ public class TransyPO extends AbstractPage {
         return getElementText(By.xpath(Locators.TRANSCY_BUTTON_TEMPLATE_DEFAULT));
     }
 
+//  CUSTOMIZATION TAB
+    public void clickToCustomizationTab() throws InterruptedException {
+        waitToElementClickable((Locators.CUSTOMIZE_TITLE_CONTENT));
+        clickToElement(Locators.CUSTOMIZE_TITLE_CONTENT);
+        Thread.sleep(5000);
+    }
+    public void clickToPositionTab() throws InterruptedException {
+        waitToElementClickable((Locators.POSITIONS_TITLE_CONTENT));
+        clickToElement(Locators.POSITIONS_TITLE_CONTENT);
+        Thread.sleep(5000);
+    }
+    public void clickToSwitcherStyleTab() throws InterruptedException {
+        waitToElementClickable((Locators.SWITCHER_STYLE_CONTENT_TITLE));
+        clickToElement(Locators.SWITCHER_STYLE_CONTENT_TITLE);
+        Thread.sleep(5000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
+    }
+        public void clickToSwitcherDisclosureStyleTab() throws InterruptedException {
+        waitToElementClickable((Locators.SWITCHER_STYLE_CONTENT_TITLE));
+        clickToElement(Locators.SWITCHER_STYLE_CONTENT_TITLE);
+        Thread.sleep(5000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,300)");
+    }
+
+    public String getPositionTitleContent(){
+        return getElementText(By.xpath(Locators.POSITIONS_TITLE_CONTENT));
+    }
+    public String getPreferenceTitleContent(){
+        return getElementText(By.xpath(Locators.PREFERENCE_TITLE_CONTENT));
+    }
+    public String getPreferenceSettingType(){
+        return getElementText(By.xpath(Locators.PREFERENCE_SETTING_TYPE));
+    }
+    public String getPreferenceSettingPosition(){
+        return getElementText(By.xpath(Locators.PREFERENCE_SETTING_POSITION));
+    }
+    public String getOffsetTitleContent(){
+        return getElementText(By.xpath(Locators.OFFSET_TITLE_CONTENT));
+    }
+    public String getOffsetSettingTop(){
+        return getAttribute(By.xpath(Locators.OFFSET_SETTING_TOP),"value");
+    }
+    public String getOffsetSettingRight(){
+        return getAttribute(By.xpath(Locators.OFFSET_SETTING_RIGHT),"value");
+    }
+    public String getSwitcherStyleTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleWidthTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CONTENT_WIDTH));
+    }
+    public String getSwitcherStyleSettingWidth(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_WIDTH_SETTING));
+    }
+    public String getSwitcherStyleSettingWidthValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_STYLE_WIDTH_VALUE),"value");
+    }
+    public String getSwitcherStyleBorderTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_BORDER_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingBorder(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_BORDER_SETTING));
+    }
+    public String getSwitcherStyleSettingBorderStyle(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_BORDER_STYLE));
+    }
+    public String getSwitcherStyleEffectTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_EFFECT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingEffect(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_EFFECT_SETTING));
+    }
+    public String getSwitcherStyleHoverEffectTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_HOVER_EFFECT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingHoverEffect(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_HOVER_EFFECT_SETTING));
+    }
+    public String getSwitcherStyleNoteEffect(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_EFFECT_NOTE));
+    }
+    public String getSwitcherStyleLayoutTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LAYOUT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingLayout(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LAYOUT_SETTING));
+    }
+    public String getSwitcherStyleArrowSegmentTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_ARROW_SEGMENT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingArrowSegment(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_ARROW_SEGMENT_SETTING));
+    }
+    public String getSwitcherStyleSettingStyleArrowSegment(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_ARROW_SEGMENT_LAYOUT));
+    }
+    public String getSwitcherStyleLabelSegmentTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LABEL_SEGMENT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingLabelSegment(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LABEL_SEGMENT_SETTING));
+    }
+    public String getSwitcherStyleNoteLabelSegment(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LABEL_SEGMENT_NOTE));
+    }
+    public String getSwitcherStyleLanguageTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingLanguage(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CONTENT_SETTING));
+    }
+    public boolean getSwitcherStyleLanguageStatusChecked(){
+        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX),"checked");
+        return true;
+    }
+    public boolean getSwitcherStyleLanguageStatusEnable(){
+//        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX),"disable");
+//        return false;
+//        WebElement enable = driver.findElement(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX));
+//        if (enable.isEnabled()){
+//            logConsole("Enabled:" + enable.isEnabled() );
+//        }else
+//            logConsole("Enabled: Disable" );
+//        return true;
+        boolean enable = driver.findElement(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX)).isEnabled();
+        return enable;
+    }
+
+    public String getSwitcherStyleContentCheckboxLanguage(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX_CONTENT));
+    }
+    public String getSwitcherStyleCurrencyTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingCurrency(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CONTENT_SETTING));
+    }
+    public boolean getSwitcherStyleCurrencyStatusChecked(){
+        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX),"checked");
+        return true;
+    }
+    public boolean getSwitcherStyleCurrencyStatusEnable(){
+//        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX),"disable");
+//        return true;
+        boolean enable = driver.findElement(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX)).isEnabled();
+        return enable;
+    }
+    public String getSwitcherStyleContentCheckboxCurrency(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX_CONTENT));
+    }
+    public String getSwitcherStyleDividerFormatTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_DIVIDER_FORMAT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingDividerFormat(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_DIVIDER_FORMAT_CONTENT_SETTING));
+    }
+    public String getSwitcherStyleFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingFont(){
+        return getAttribute(By.xpath(Locators.SWITCHER_STYLE_FONT_SETTING),"value");
+    }
+    public String getSwitcherStyleLayoutFont(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FONT_LAYOUT));
+    }
+    public String getSwitcherStyleNoteFont(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FONT_NOTE));
+    }
+    public String getSwitcherStyleFlagStyleTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FLAG_STYLE_CONTENT_TITLE));
+    }
+    public String getSwitcherStyleSettingFlagStyle(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FLAG_STYLE_SETTING));
+    }
+    public String getSwitcherStyleLayoutFlagStyle(){
+        return getElementText(By.xpath(Locators.SWITCHER_STYLE_FLAG_STYLE));
+    }
 }
