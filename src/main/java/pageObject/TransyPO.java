@@ -234,7 +234,7 @@ public class TransyPO extends AbstractPage {
         }
         waitToElementClickable((Locators.APPS_STORE_BUTTON));
         clickToElement(Locators.APPS_STORE_BUTTON);
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
     public void clickToLoginTranscyApp() throws InterruptedException {
         String winHandleBefore = driver.getWindowHandle();
@@ -407,14 +407,20 @@ public class TransyPO extends AbstractPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1000)");
     }
-        public void clickToSwitcherDisclosureStyleTab() throws InterruptedException {
-        waitToElementClickable((Locators.SWITCHER_STYLE_CONTENT_TITLE));
-        clickToElement(Locators.SWITCHER_STYLE_CONTENT_TITLE);
+    public void clickToSwitcherDisclosureStyleTab() throws InterruptedException {
+        waitToElementClickable((Locators.SWITCHER_DISCLOSURE_CONTENT_TITLE));
+        clickToElement(Locators.SWITCHER_DISCLOSURE_CONTENT_TITLE);
         Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,300)");
+        js.executeScript("window.scrollBy(0,2000)");
     }
-
+    public void clickToColorSchemaTab() throws InterruptedException {
+        waitToElementClickable((Locators.COLOR_SCHEMA_CONTENT_TITLE));
+        clickToElement(Locators.COLOR_SCHEMA_CONTENT_TITLE);
+        Thread.sleep(5000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2300)");
+    }
     public String getPositionTitleContent(){
         return getElementText(By.xpath(Locators.POSITIONS_TITLE_CONTENT));
     }
@@ -518,7 +524,6 @@ public class TransyPO extends AbstractPage {
         boolean enable = driver.findElement(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX)).isEnabled();
         return enable;
     }
-
     public String getSwitcherStyleContentCheckboxLanguage(){
         return getElementText(By.xpath(Locators.SWITCHER_STYLE_LANGUAGE_CHECKBOX_CONTENT));
     }
@@ -568,4 +573,409 @@ public class TransyPO extends AbstractPage {
     public String getSwitcherStyleLayoutFlagStyle(){
         return getElementText(By.xpath(Locators.SWITCHER_STYLE_FLAG_STYLE));
     }
+    public String getSwitcherDisclosureStyleTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleWidthTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_WIDTH_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleWidthSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_WIDTH_SETTING));
+    }
+    public String getSwitcherDisclosureStyleWidthValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_WIDTH_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleBorderTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BORDER_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleBorderSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BORDER_SETTING));
+    }
+    public String getSwitcherDisclosureStyleBorderStyle(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BORDER_STYLE));
+    }
+    public String getSwitcherDisclosureStyleActiveEffectTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_ACTIVE_EFFECT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleActiveEffectSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_ACTIVE_EFFECT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleActiveEffectNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_ACTIVE_EFFECT_NOTE));
+    }
+    public String getSwitcherDisclosureStyleElementToShowTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_ELEMENT_TO_SHOW_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleElementToShowSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_ELEMENT_TO_SHOW_SETTING));
+    }
+    public String getSwitcherDisclosureStyleLanguageTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_LANGUAGE_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleLanguageSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_LANGUAGE_SETTING));
+    }
+    public boolean getSwitcherDisclosureStyleLanguageStatusChecked(){
+        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_LANGUAGE_CHECKBOX),"checked");
+        return true;
+    }
+    public boolean getSwitcherDisclosureStyleLanguageStatusEnable(){
+//        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX),"disable");
+//        return true;
+        boolean enable = driver.findElement(By.xpath(Locators.SWITCHER_DISCLOSURE_LANGUAGE_CHECKBOX)).isEnabled();
+        return enable;
+    }
+    public String getSwitcherDisclosureStyleLanguageCheckboxContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_LANGUAGE_CHECKBOX_CONTENT));
+    }
+    public String getSwitcherDisclosureStyleCurrencyTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_CURRENCY_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleCurrencySetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_CURRENCY_SETTING));
+    }
+    public boolean getSwitcherDisclosureStyleCurrencyStatusChecked(){
+        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_CURRENCY_CHECKBOX),"checked");
+        return true;
+    }
+    public boolean getSwitcherDisclosureStyleCurrencyStatusEnable(){
+//        String languageStatus = getAttribute(By.xpath(Locators.SWITCHER_STYLE_CURRENCY_CHECKBOX),"disable");
+//        return true;
+        boolean enable = driver.findElement(By.xpath(Locators.SWITCHER_DISCLOSURE_CURRENCY_CHECKBOX)).isEnabled();
+        return enable;
+    }
+    public String getSwitcherDisclosureStyleCurrencyCheckboxContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_CURRENCY_CHECKBOX_CONTENT));
+    }
+    public String getSwitcherDisclosureStyleTitleFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_TITLE_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleTitleFontValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_TITLE_FONT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleTitleFontSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_TITLE_FONT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleTitleFontNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_TITLE_FONT_NOTE));
+    }
+    public String getSwitcherDisclosureStyleSearchBoxTextFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleSearchBoxTextFontValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleSearchBoxTextFontSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleSearchBoxTextFontNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_NOTE));
+    }
+    public String getSwitcherDisclosureStyleOptionFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_OPTION_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleOptionFontValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_OPTION_FONT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleOptionFontSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_OPTION_FONT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleOptionFontNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_OPTION_FONT_NOTE));
+    }
+    public String getSwitcherDisclosureStyleSelectedOptionFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SELECT_OPTION_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleSelectedOptionFontValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_SELECT_OPTION_FONT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleSelectedOptionFontSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SELECT_OPTION_FONT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleSelectedOptionFontNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_SELECT_OPTION_FONT_NOTE));
+    }
+    public String getSwitcherDisclosureStyleFlagStyleTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_FLAG_STYLE_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleFlagStyleSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_FLAG_STYLE_SETTING));
+    }
+    public String getSwitcherDisclosureStyleFlagStyleStyle(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_FLAG_STYLE_VALUE));
+    }
+    public String getSwitcherDisclosureStyleButtonTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleButtonWidthTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_WIDTH_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleButtonWidthSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_WIDTH_SETTING));
+    }
+    public String getSwitcherDisclosureStyleButtonWidthValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_WIDTH_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleButtonHeightTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_HEIGHT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleButtonHeightSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_HEIGHT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleButtonHeightValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_HEIGHT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleButtonShapeTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_SHAPE_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleButtonShapeSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_SHAPE_SETTING));
+    }
+    public String getSwitcherDisclosureStyleButtonFontTitleContent(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_FONT_CONTENT_TITLE));
+    }
+    public String getSwitcherDisclosureStyleButtonFontSetting(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_FONT_SETTING));
+    }
+    public String getSwitcherDisclosureStyleButtonFontValue(){
+        return getAttribute(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_FONT_VALUE),"value");
+    }
+    public String getSwitcherDisclosureStyleButtonFontNote(){
+        return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_FONT_NOTE));
+    }
+    public String getColorSchemaTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherColorBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherColorTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherColorArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_ARROW_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherColorArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_ARROW_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherHoverStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherHoverStateBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherHoverStateBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherHoverStateBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherHoverStateBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherHoverStateTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherHoverStateTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherHoverStateArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_ARROW_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherHoverStateArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_ARROW_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherActiveStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherActiveStateBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherActiveStateBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherActiveStateBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherActiveStateBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherActiveStateTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherActiveStateTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherActiveStateArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_ARROW_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherActiveStateArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_ARROW_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorTitleColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorTitleColorValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectBoxArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectedOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectedOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectedOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSelectedOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxIconTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxIconValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorSearchBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorButtonBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorButtonBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureColorButtonTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureColorButtonTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateButtonBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateButtonBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_VALUE_COLOR));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateButtonTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_CONTENT_TITLE));
+    }
+    public String getColorSchemaSwitcherDisclosureHoverStateButtonTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_VALUE_COLOR));
+    }
+
 }
