@@ -185,14 +185,14 @@ public class TransyPO extends AbstractPage {
     public void clickToInstallTranscyV4AppBtn() throws InterruptedException {
         waitToElementClickable((Locators.CLICK_INSTALL_TRANSCY_UAT_V4_APP_BUTTON));
         clickToElement(Locators.CLICK_INSTALL_TRANSCY_UAT_V4_APP_BUTTON);
-        Thread.sleep(25000);
+        Thread.sleep(20000);
     }
     public void clickToChooseFreePlanTranscyV4AppBtn() throws InterruptedException {
         switchToFrameOrIframe(Locators.IFRAME_TRANSCY_UAT_V4_APP);
         waitToElementClickable((Locators.CLICK_CHOOSE_FREE_PLAN_BUTTON));
         clickToElement(Locators.CLICK_CHOOSE_FREE_PLAN_BUTTON);
         driver.switchTo().defaultContent();
-        Thread.sleep(15000);
+        Thread.sleep(10000);
     }
     public void clickSwitcherMenuBtn() throws InterruptedException {
         waitToElementClickable((Locators.SELECT_MENU_SWITCHER_BUTTON));
@@ -273,10 +273,10 @@ public class TransyPO extends AbstractPage {
     public String getImageURLModal3(){
         return getAttribute(By.xpath(Locators.IMAGE_LINK_MODAL_3),"src");
     }
-    public String getContentTitleSecondModal(){
+    public String getContentTitleModal4(){
         return getElementText(By.xpath(Locators.CONTENT_TITLE_MODAL_SECOND));
     }
-    public String getContentDescriptionSecondModal(){
+    public String getContentDescriptionModal4(){
         return getElementText(By.xpath(Locators.CONTENT_DESCRIPTION_MODAL_SECOND));
     }
     public void clickToNextButton() throws InterruptedException {
@@ -414,9 +414,9 @@ public class TransyPO extends AbstractPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,2000)");
     }
-    public void clickToColorSchemaTab() throws InterruptedException {
-        waitToElementClickable((Locators.COLOR_SCHEMA_CONTENT_TITLE));
-        clickToElement(Locators.COLOR_SCHEMA_CONTENT_TITLE);
+    public void clickToColorSchemeTab() throws InterruptedException {
+        waitToElementClickable((Locators.COLOR_SCHEME_CONTENT_TITLE));
+        clickToElement(Locators.COLOR_SCHEME_CONTENT_TITLE);
         Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,2300)");
@@ -743,239 +743,239 @@ public class TransyPO extends AbstractPage {
     public String getSwitcherDisclosureStyleButtonFontNote(){
         return getElementText(By.xpath(Locators.SWITCHER_DISCLOSURE_BUTTON_FONT_NOTE));
     }
-    public String getColorSchemaTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_CONTENT_TITLE));
+    public String getColorSchemeTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_CONTENT_TITLE));
+    public String getColorSchemeSwitcherColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherColorBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherColorBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherColorBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherColorBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherColorBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherColorTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherColorTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherColorTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherColorArrowTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_ARROW_CONTENT_TITLE));
+    public String getColorSchemeSwitcherColorArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_ARROW_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherColorArrowValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_COLOR_ARROW_VALUE_COLOR));
+    public String getColorSchemeSwitcherColorArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_COLOR_ARROW_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherHoverStateTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_CONTENT_TITLE));
+    public String getColorSchemeSwitcherHoverStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherHoverStateBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherHoverStateBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherHoverStateBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherHoverStateBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherHoverStateBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherHoverStateBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherHoverStateBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherHoverStateBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherHoverStateTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherHoverStateTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherHoverStateTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherHoverStateTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherHoverStateArrowTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_ARROW_CONTENT_TITLE));
+    public String getColorSchemeSwitcherHoverStateArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_ARROW_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherHoverStateArrowValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_HOVER_STATE_ARROW_VALUE_COLOR));
+    public String getColorSchemeSwitcherHoverStateArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_HOVER_STATE_ARROW_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherActiveStateTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_CONTENT_TITLE));
+    public String getColorSchemeSwitcherActiveStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherActiveStateBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherActiveStateBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherActiveStateBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherActiveStateBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherActiveStateBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherActiveStateBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherActiveStateBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherActiveStateBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherActiveStateTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherActiveStateTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherActiveStateTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherActiveStateTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherActiveStateArrowTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_ARROW_CONTENT_TITLE));
+    public String getColorSchemeSwitcherActiveStateArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_ARROW_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherActiveStateArrowValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_ACTIVE_STATE_ARROW_VALUE_COLOR));
+    public String getColorSchemeSwitcherActiveStateArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_ACTIVE_STATE_ARROW_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorTitleColorTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorTitleColorTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorTitleColorValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorTitleColorValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_TITLE_COLOR_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxArrowTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectBoxArrowValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectBoxArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_BOX_ARROW_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorOptionBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorOptionBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_OPTION_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorOptionTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorOptionTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_OPTION_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectedOptionBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectedOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectedOptionBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectedOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectedOptionTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSelectedOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSelectedOptionTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSelectedOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SELECT_OPTION_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxIconTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxIconTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxIconValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxIconValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_ICON_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorSearchBoxTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorSearchBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_SEARCH_BOX_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorButtonBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorButtonBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorButtonBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorButtonBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BUTTON_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureColorButtonTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureColorButtonTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureColorButtonTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureColorButtonTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_COLOR_BUTTON_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBorderTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxBorderTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxBorderValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxBorderValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_BORDER_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxArrowTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxArrowTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateSelectBoxArrowValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateSelectBoxArrowValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_SELECT_BOX_ARROW_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateOptionBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateOptionBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateOptionBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateOptionBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateOptionTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateOptionTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateOptionTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateOptionTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_OPTION_TEXT_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateButtonBackgroundTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateButtonBackgroundTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateButtonBackgroundValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateButtonBackgroundValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_BACKGROUND_VALUE_COLOR));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateButtonTextTitleContent(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_CONTENT_TITLE));
+    public String getColorSchemeSwitcherDisclosureHoverStateButtonTextTitleContent(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_CONTENT_TITLE));
     }
-    public String getColorSchemaSwitcherDisclosureHoverStateButtonTextValueColor(){
-        return getElementText(By.xpath(Locators.COLOR_SCHEMA_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_VALUE_COLOR));
+    public String getColorSchemeSwitcherDisclosureHoverStateButtonTextValueColor(){
+        return getElementText(By.xpath(Locators.COLOR_SCHEME_SWITCHER_DISCLOSURE_HOVER_STATE_BUTTON_TEXT_VALUE_COLOR));
     }
 
 }
