@@ -4,7 +4,11 @@
 <suite name="createStoreAndInstallApp" >
 <test name="createStoreAndInstallApp">
     <classes>
-        <class name="transcy.createStoreAndInstallApp"></class>
+        <class name="transcy.createStoreAndInstallApp">
+<!--            <methods>-->
+<!--                <include name="LoginPartnerFireAppsDev"/>-->
+<!--            </methods>-->
+        </class>
     </classes>
 </test>
     <listeners>
