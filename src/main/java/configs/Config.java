@@ -1,13 +1,14 @@
-package commons;
+package configs;
 
 import java.util.Random;
 
 public class Config {
+
     //    PARNTER INFO
     public static final String partnerURL = "https://www.shopify.com/partners";
     public static final String emailPartner = "vilh@fireapps.vn";
     public static final String passwordPartner = "123321";
-    public static final String recoveryCode = "EA95-13F3-E134";
+    public static final String recoveryCode = "6239-F03F-3AAC";
     int number = new Random().nextInt(99999999);
     public static final String storeName = "storetesttranscy" + new Random().nextInt(99999999);
 

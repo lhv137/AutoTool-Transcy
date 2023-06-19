@@ -1,107 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Run Test Method 2"
-           tests="1"
-           failures="1"
+<testsuite name="CreateStoreAndInstallApp"
+           tests="8"
+           failures="0"
            errors="0"
            skipped="0"
-           time="30.341">
+           time="989.406">
   <properties />
-            <testcase name="VerifySwitcherSettingsDefaultCustomizationTab" time="30.341" classname="transcy.createStoreAndInstallApp">
-                <failure type="org.openqa.selenium.TimeoutException"
-                  message="Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id=&apos;customization&apos;] (tried for 30 second(s) with 500 milliseconds interval)"
-              >
-<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='customization'] (tried for 30 second(s) with 500 milliseconds interval)
-  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-  commons.AbstractPage.waitToElementClickable(AbstractPage.java:79)
-  pageObject.TransyPO.clickToCustomizationTab(TransyPO.java:397)
-  transcy.createStoreAndInstallApp.VerifySwitcherSettingsDefaultCustomizationTab(createStoreAndInstallApp.java:447)
-  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-  java.base/java.lang.reflect.Method.invoke(Method.java:578)
-  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-  org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-  org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-  org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-  org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-  org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-  org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-  org.testng.TestRunner.privateRun(TestRunner.java:848)
-  org.testng.TestRunner.run(TestRunner.java:621)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-  org.testng.SuiteRunner.run(SuiteRunner.java:336)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-  org.testng.TestNG.runSuites(TestNG.java:1114)
-  org.testng.TestNG.run(TestNG.java:1082)
-  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=114.0.5735.110)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eee5c864d0707ed30753c44c5b48eaee, findElement {using=xpath, value=//*[@id='customization']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60666/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eee5c864d0707ed30753c44c5b48eaee
-  java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-  java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-  org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-  org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-  org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-  org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-  org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
-  org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-  commons.AbstractPage.waitToElementClickable(AbstractPage.java:79)
-  pageObject.TransyPO.clickToCustomizationTab(TransyPO.java:397)
-  transcy.createStoreAndInstallApp.VerifySwitcherSettingsDefaultCustomizationTab(createStoreAndInstallApp.java:447)
-  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-  java.base/java.lang.reflect.Method.invoke(Method.java:578)
-  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-  org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-  org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-  org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-  org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-  org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-  org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-  org.testng.TestRunner.privateRun(TestRunner.java:848)
-  org.testng.TestRunner.run(TestRunner.java:621)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-  org.testng.SuiteRunner.run(SuiteRunner.java:336)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-  org.testng.TestNG.runSuites(TestNG.java:1114)
-  org.testng.TestNG.run(TestNG.java:1082)
-  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-      </failure>
-
-          </testcase>
   
   
-  
+            <testcase name="VerifySwitcherSettingsDefaultTemplatesTab" time="29.820" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="LoginPartnerFireAppsDev" time="46.919" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="InstallTranscyAppUAT" time="102.945" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="VerifySwitcherSettingsDefaultGeneralTab" time="49.479" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="VerifySwitcherSettingsDefaultCustomizationTab" time="585.170" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="VerifyModalFirstTimeGoToMenuSwitcher" time="62.538" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="CreateStoreTestInPartner" time="70.044" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="AddStoreTestTranscyInAdminTool" time="42.491" classname="transcy.createStoreAndInstallApp" />
+      
 </testsuite>

@@ -1,6 +1,6 @@
-package commons;
+package expectedData;
 
-public class ExpectedData {
+public class ExpectedDataSwitcherSettingDefault {
 
 //  FIRST MODAL AFTER GO TO SWITCHER MENU
 

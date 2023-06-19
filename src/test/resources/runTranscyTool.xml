@@ -1,8 +1,8 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="createStoreAndInstallApp" >
-<test name="createStoreAndInstallApp">
+<suite name="VerifySwitcherSettingsDefault" >
+<test name="CreateStoreAndInstallApp">
     <classes>
         <class name="transcy.createStoreAndInstallApp">
 <!--            <methods>-->
