@@ -9,7 +9,7 @@ public class Config {
     public static final String emailPartner = "vilh@fireapps.vn";
     public static final String passwordPartner = "123321";
     public static final String recoveryCode = "6239-F03F-3AAC";
-    int number = new Random().nextInt(99999999);
+//    int number = new Random().nextInt(99999999);
     public static final String storeName = "storetesttranscy" + new Random().nextInt(99999999);
 
     //    ADMIN TOOL INFO

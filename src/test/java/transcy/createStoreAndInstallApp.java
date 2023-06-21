@@ -29,7 +29,7 @@ public class createStoreAndInstallApp extends AbstractTest {
         driver.manage().window().maximize();
     }
 
-    @Test(priority = 1, description = "Login Partner FireApp Dev")
+    @Test(priority = 1, description = "Login Partner FireApps Dev")
     public void LoginPartnerFireAppsDev() throws InterruptedException {
 
         Thread.sleep(3000);
@@ -65,7 +65,7 @@ public class createStoreAndInstallApp extends AbstractTest {
 
     }
 
-    @Test(priority = 2, description = "Create Store Test In FireApp Dev")
+    @Test(priority = 2, description = "Create Store Test In Partnrt FireApps Dev")
     public void CreateStoreTestInPartner() throws InterruptedException {
         Thread.sleep(3000);
         log.info("=== Create Store Test ===");
