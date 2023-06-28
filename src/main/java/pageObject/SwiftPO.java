@@ -67,6 +67,7 @@ public class SwiftPO extends AbstractPage {
     }
     public void clickToAddStore() throws InterruptedException {
         waitToElementClickable((SwiftLocators.SECLECT_ADD_STORE_BUTTON));
+
         clickToElement(SwiftLocators.SECLECT_ADD_STORE_BUTTON);
         Thread.sleep(3000);
     }
