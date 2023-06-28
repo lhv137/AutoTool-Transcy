@@ -1,8 +1,8 @@
 package transcy;
 
 import commons.AbstractTest;
-import expectedData.ExpectedDataSwitcherSettingDefault;
 import commons.PageGeneratorManager;
+import expectedData.ExpectedDataSwitcherSettingDefault;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,8 +21,6 @@ public class loginStoreSteps extends AbstractTest {
     String passSandboxPartner = "Vile@12345";
     String storeNameSandboxPartner = "https://admin.shopify.com/store/arstoresandbox1";
 
-    public loginStoreSteps() throws InterruptedException {
-    }
 
     @BeforeTest
     public void beforeTest() {
@@ -39,6 +37,20 @@ public class loginStoreSteps extends AbstractTest {
         Thread.sleep(3000);
 //        driver.switchTo().newWindow(WindowType.TAB);
         driver.get(storeNameSandboxPartner);
+
+//        Window handle
+//        Thread.sleep(5000);
+//        driver.switchTo().newWindow(WindowType.TAB);
+//        driver.get("https://google.com");
+//        // hold all window handles in array list
+//        ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+//        //switch to new tab
+//        driver.switchTo().window(newTb.get(1));
+////        System.out.println("Page title of new tab: " + driver.getTitle());
+//        //switch to parent window
+//        driver.switchTo().window(newTb.get(0));
+////        System.out.println("Page title of new tab: " + driver.getTitle());
+
 
         log.info("Step 02: Fill Email account Partner");
         transcyPage.inputToEmailAccountPartner(emailSandboxPartner);

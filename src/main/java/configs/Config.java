@@ -8,7 +8,7 @@ public class Config {
     public static final String partnerURL = "https://www.shopify.com/partners";
     public static final String emailPartner = "vilh@fireapps.vn";
     public static final String passwordPartner = "123321";
-    public static final String recoveryCode = "6239-F03F-3AAC";
+    public static final String recoveryCode = "64FF-7FA8-FC7A";
 //    int number = new Random().nextInt(99999999);
     public static final String storeName = "storetesttranscy" + new Random().nextInt(99999999);
 

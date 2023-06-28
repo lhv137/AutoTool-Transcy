@@ -96,7 +96,7 @@ public class Locators {
     public static final String SWITCHER_DISPLAY_STATUS = "//button[@class='switch__slider']";
     public static final String SWITCHER_DISPLAY_LABEL = "//label[text()='Switcher visibility']";
     public static final String SWITCHER_DISPLAY_SETTING = "//button[contains(.,'Only admin')]";
-    public static final String SWITCHER_DISPLAY_NOTE = "(//span[@class='Polaris-TextStyle--variationSubdued'])[4]";
+    public static final String SWITCHER_DISPLAY_NOTE = "(//span[@class='Polaris-TextStyle--variationSubdued'])[6]";
     public static final String SWITCHER_DISCLOSURE = "//span[contains(.,'Switcher disclosure')]";
     public static final String SWITCHER_DISCLOSURE_SETTING = "//span[contains(text(),'Dropdown')]";
     public static final String GEOLOCATION_TITLE = "//h2[contains(.,'Geolocation')]";
@@ -185,7 +185,7 @@ public class Locators {
     public static final String SWITCHER_DISCLOSURE_CURRENCY_CHECKBOX_CONTENT = "(//span[contains(.,'Flag goes first')])[2]";
     public static final String SWITCHER_DISCLOSURE_TITLE_FONT_CONTENT_TITLE = "//span[contains(.,'Title font')]";
     public static final String SWITCHER_DISCLOSURE_TITLE_FONT_VALUE = "(//input[contains(@autocomplete,'off')])[2]";
-    public static final String SWITCHER_DISCLOSURE_TITLE_FONT_SETTING = "(//span[contains(@class,'Polaris-Button__Text')])[13]";
+    public static final String SWITCHER_DISCLOSURE_TITLE_FONT_SETTING = "(//span[contains(@class,'Polaris-Button__Text')])[17]";
     public static final String SWITCHER_DISCLOSURE_TITLE_FONT_NOTE = "(//span[contains(@class,'Polaris-TextStyle--variationSubdued')])[3]";
     public static final String SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_CONTENT_TITLE = "//span[contains(.,'Search-box text font')]";
     public static final String SWITCHER_DISCLOSURE_SEARCH_BOX_TEXT_FONT_VALUE = "(//input[contains(@autocomplete,'off')])[3]";

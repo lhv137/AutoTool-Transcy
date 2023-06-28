@@ -1,20 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="CreateStoreAndInstallApp"
            tests="8"
-           failures="0"
+           failures="2"
            errors="0"
            skipped="0"
-           time="989.406">
+           time="621.228">
   <properties />
+            <testcase name="VerifySwitcherSettingsDefaultCustomizationTab" time="242.595" classname="transcy.createStoreAndInstallApp">
+                <failure type="java.lang.AssertionError"
+                  message="expected [Bold] but found [English name and flag]"
+              >
+<![CDATA[java.lang.AssertionError: expected [Bold] but found [English name and flag]
+  org.testng.Assert.fail(Assert.java:111)
+  org.testng.Assert.failNotEquals(Assert.java:1578)
+  org.testng.Assert.assertEqualsImpl(Assert.java:150)
+  org.testng.Assert.assertEquals(Assert.java:132)
+  org.testng.Assert.assertEquals(Assert.java:656)
+  org.testng.Assert.assertEquals(Assert.java:666)
+  transcy.createStoreAndInstallApp.VerifySwitcherSettingsDefaultCustomizationTab(createStoreAndInstallApp.java:891)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+  java.base/java.lang.reflect.Method.invoke(Method.java:578)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+  org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+  org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+  org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+  org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  org.testng.TestRunner.privateRun(TestRunner.java:848)
+  org.testng.TestRunner.run(TestRunner.java:621)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+  org.testng.SuiteRunner.run(SuiteRunner.java:336)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+  org.testng.TestNG.runSuites(TestNG.java:1114)
+  org.testng.TestNG.run(TestNG.java:1082)
+  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="VerifySwitcherSettingsDefaultGeneralTab" time="21.780" classname="transcy.createStoreAndInstallApp">
+                <failure type="java.lang.AssertionError"
+                  message="expected [Only admin: You or visitors with admin access can preview the Switcher to check if it works correctly before going public.] but found [Follow the three steps below to show your store to the world.]"
+              >
+<![CDATA[java.lang.AssertionError: expected [Only admin: You or visitors with admin access can preview the Switcher to check if it works correctly before going public.] but found [Follow the three steps below to show your store to the world.]
+  org.testng.Assert.fail(Assert.java:111)
+  org.testng.Assert.failNotEquals(Assert.java:1578)
+  org.testng.Assert.assertEqualsImpl(Assert.java:150)
+  org.testng.Assert.assertEquals(Assert.java:132)
+  org.testng.Assert.assertEquals(Assert.java:656)
+  org.testng.Assert.assertEquals(Assert.java:666)
+  transcy.createStoreAndInstallApp.VerifySwitcherSettingsDefaultGeneralTab(createStoreAndInstallApp.java:333)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+  java.base/java.lang.reflect.Method.invoke(Method.java:578)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+  org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+  org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+  org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+  org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  org.testng.TestRunner.privateRun(TestRunner.java:848)
+  org.testng.TestRunner.run(TestRunner.java:621)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+  org.testng.SuiteRunner.run(SuiteRunner.java:336)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+  org.testng.TestNG.runSuites(TestNG.java:1114)
+  org.testng.TestNG.run(TestNG.java:1082)
+  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="VerifySwitcherSettingsDefaultTemplatesTab" time="29.820" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="LoginPartnerFireAppsDev" time="46.919" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="InstallTranscyAppUAT" time="102.945" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="VerifySwitcherSettingsDefaultGeneralTab" time="49.479" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="VerifySwitcherSettingsDefaultCustomizationTab" time="585.170" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="VerifyModalFirstTimeGoToMenuSwitcher" time="62.538" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="CreateStoreTestInPartner" time="70.044" classname="transcy.createStoreAndInstallApp" />
-                <testcase name="AddStoreTestTranscyInAdminTool" time="42.491" classname="transcy.createStoreAndInstallApp" />
+            <testcase name="LoginPartnerFireAppsDev" time="47.103" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="CreateStoreTestInPartner" time="70.091" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="VerifySwitcherSettingsDefaultTemplatesTab" time="29.954" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="VerifyModalFirstTimeGoToMenuSwitcher" time="62.694" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="AddStoreTestTranscyInAdminTool" time="42.323" classname="transcy.createStoreAndInstallApp" />
+                <testcase name="InstallTranscyAppUAT" time="104.688" classname="transcy.createStoreAndInstallApp" />
       
 </testsuite>

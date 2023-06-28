@@ -15,7 +15,7 @@ public class TransyPO extends AbstractPage {
         super(driver);
         this.driver = driver;
     }
-//    LOGIN PARTNER
+//   LOGIN PARTNER
     public void clickToLoginPartnerBtn() throws InterruptedException {
         waitToElementClickable(Locators.LOGIN_SHOPIFY_PARTNER_BUTTON);
         clickToElement(Locators.LOGIN_SHOPIFY_PARTNER_BUTTON);
