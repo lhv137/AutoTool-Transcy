@@ -59,15 +59,15 @@ public class createStoreTestInPartner extends AbstractTest {
         swiftPage.clickToSelectPartnerBtn();
     }
 
-    @Test(priority = 2,invocationCount = 4)
-    public void CreateStoreTestInPartner() throws InterruptedException {
+    @Test(priority = 2,invocationCount = 3)
+    public void CreateStoreTestInPartnerSwift() throws InterruptedException {
         Thread.sleep(3000);
         log.info("=== Create Store Test ===");
 
         log.info("Step 01: Press Stores Menu");
         swiftPage.selectMenuStoresBtn();
 
-        for(int Count = 1;Count<=10;Count++){
+        for(int Count = 2; Count<=10; Count++){
             String storeNameSwift = swiftConfig.storeName + Count;
             String storeDomain = storeNameSwift + ".myshopify.com";
 
@@ -83,6 +83,7 @@ public class createStoreTestInPartner extends AbstractTest {
             log.info("Step 05: Fill Store name");
             swiftPage.inputStoreName(storeNameSwift);
             System.out.println("Store name: " + storeNameSwift);
+            System.out.println("Store domain: " + storeDomain);
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,2000)");
 
@@ -91,6 +92,16 @@ public class createStoreTestInPartner extends AbstractTest {
 
             log.info("Step 07: Press Create Development Store Button");
             swiftPage.clickToAddDevelopmentStoreBtn();
+
+            log.info("Step 08: Re-login Partner");
+            driver.get(swiftConfig.partnerURL);
+
+            log.info("Step 09: Press Login Partner Button");
+            swiftPage.clickToLoginPartnerBtn();
+
+            log.info("Step 10: Press Partner Button");
+            swiftPage.clickToSelectPartnerBtn();
+
 
 //        log.info("Step 08: Choose account to login");
 //        transcyPage.clickToChooseAccountBtn();

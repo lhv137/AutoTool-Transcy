@@ -13,7 +13,9 @@ public class SwiftLocators {
     public static final String LOGIN_PARTNER_AFTER_ENTER_CODE_BUTTON = "//button[@type='submit']";
 
     //    SELECT PARTNER ACCOUNT
-    public static final String SELECT_PARTNER_ACCOUNTS = "//span[text()='PerfectApps']/ancestor::a";
+//    public static final String SELECT_PARTNER_ACCOUNTS = "//span[text()='PerfectApps']/ancestor::a";
+    public static final String SELECT_PARTNER_ACCOUNTS = "//span[text()='FireApps Dev']/ancestor::a";
+
 
     //    CREATE STORE TEST
     public static final String SELECT_MENU_STORES_BUTTON = "//span[text()='Stores']/ancestor::a";
