@@ -24,6 +24,7 @@
         + Store name in file Config: storeName = "store-test-swift-staging-"
         + Count in For loop: Count = 1; Count<=100; Count++ 
         + Store name full: store-test-swift-staging-1
+       
    - Run Test:  
      + Config Number of store create in file: "src/test/java/swift/createStoreTestInSwiftPartner
        + Change number of Count in For loop. Example: Change Count = 1; Count<=100 -> Will create store from 1 -> 100

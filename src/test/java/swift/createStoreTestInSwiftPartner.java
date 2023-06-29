@@ -51,7 +51,7 @@ public class createStoreTestInSwiftPartner extends AbstractTest {
         swiftPage.clickToUseARecoveryCodeBtn();
 
         log.info("Step 07: Fill Recovery Code");
-        swiftPage.inputRecoveryCode(swiftConfig.recoveryCodePartnerSwwift);
+        swiftPage.inputRecoveryCode(swiftConfig.recoveryCodePartnerSwift);
 
         log.info("Step 08: Press Login Button");
         swiftPage.clickToLoginPartnerAfterInputCodeBtn();
@@ -80,7 +80,7 @@ public class createStoreTestInSwiftPartner extends AbstractTest {
             Thread.sleep(5000);
 
             // hold all window handles in array list
-            ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+            ArrayList<String> newTb = new ArrayList<>(driver.getWindowHandles());
             //switch to new tab
             driver.switchTo().window(newTb.get(1));
             Thread.sleep(3000);
