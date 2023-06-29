@@ -7,7 +7,7 @@ public class swiftConfig {
     public static final String emailPartnerSwift = "vilh@fireapps.vn";
     public static final String passwordPartnerSwift = "123321";
     public static final String recoveryCodePartnerSwwift = "229F-9475-12F2";
-    public static final String storeName = "store-test-swift-staging-";
+    public static final String storeName = "store-swift-staging-";
 
 
 
