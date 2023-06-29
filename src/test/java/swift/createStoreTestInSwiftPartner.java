@@ -63,7 +63,7 @@ public class createStoreTestInSwiftPartner extends AbstractTest {
     @Test(priority = 2)
     public void CreateStoreTestInPartnerSwift() throws InterruptedException {
 
-        for(int Count = 1; Count<=100; Count++){
+        for(int Count = 1; Count<=2; Count++){
             String storeNameSwift = swiftConfig.storeName + Count;
             String storeDomain = storeNameSwift + ".myshopify.com";
 
@@ -107,9 +107,9 @@ public class createStoreTestInSwiftPartner extends AbstractTest {
             driver.get(driver.getCurrentUrl());
             Thread.sleep(3000);
 
-            if(Count==3){
-                break;
-            }
+//            if(Count==3){
+//                break;
+//            }
         }
         System.out.println("Created stores done!");
     }
