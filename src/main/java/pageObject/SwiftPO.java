@@ -61,20 +61,25 @@ public class SwiftPO extends AbstractPage {
     }
     //    CREATE STORE TEST
     public void selectMenuStoresBtn() throws InterruptedException {
-        waitToElementClickable((SwiftLocators.SELECT_MENU_STORES_BUTTON));
+        waitToElementClickable(SwiftLocators.SELECT_MENU_STORES_BUTTON);
         clickToElement(SwiftLocators.SELECT_MENU_STORES_BUTTON);
         Thread.sleep(3000);
     }
     public void clickToAddStore() throws InterruptedException {
-        waitToElementClickable((SwiftLocators.SECLECT_ADD_STORE_BUTTON));
-
+        waitToElementClickable(SwiftLocators.SECLECT_ADD_STORE_BUTTON);
         clickToElement(SwiftLocators.SECLECT_ADD_STORE_BUTTON);
         Thread.sleep(3000);
     }
     public void clickToCreateDevelopmentStore() throws InterruptedException {
         waitToElementClickable(SwiftLocators.DROPDOWN_CLICK_DEVELOPMENT_STORE);
-        clickToElement(SwiftLocators.DROPDOWN_CLICK_DEVELOPMENT_STORE);
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+        sendKeyBoardToOpenNewTab(SwiftLocators.DROPDOWN_CLICK_DEVELOPMENT_STORE);
+        Thread.sleep(3000);
+    }
+    public void rightClickToAddStoreDevelopment() throws InterruptedException {
+        waitToElementClickable(SwiftLocators.SECLECT_ADD_STORE_BUTTON);
+        rightClickElement(SwiftLocators.SECLECT_ADD_STORE_BUTTON);
+        Thread.sleep(3000);
     }
     public void selectOptionStoreTest() throws InterruptedException {
 //        WebDriverWait wait = new WebDriverWait (driver, Duration.ofSeconds(15));
@@ -97,7 +102,7 @@ public class SwiftPO extends AbstractPage {
     public void clickToAddDevelopmentStoreBtn() throws InterruptedException {
         waitToElementClickable(SwiftLocators.CREATE_DEVELOPMENT_STORE_BUTTON);
         clickToElement(SwiftLocators.CREATE_DEVELOPMENT_STORE_BUTTON);
-        Thread.sleep(25000);
+        Thread.sleep(30000);
     }
     public void clickToChooseAccountBtn() throws InterruptedException {
         for(String winHandle : driver.getWindowHandles()){

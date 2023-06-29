@@ -72,16 +72,32 @@ public class AbstractPage {
         waitExplicit.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
-
     public void waitToElementClickable(String locator) {
         by = By.xpath(locator);
         waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeout));
         waitExplicit.until(ExpectedConditions.elementToBeClickable(by));
     }
-
     public void sendKeyBoardToElement(String locator, Keys key) {
         element = driver.findElement(By.xpath(locator));
         action.sendKeys(element, key).perform();
+    }
+    public void sendMultiKeyBoardToElement(String locator, Keys key1, Keys key2) {
+        element = driver.findElement(By.xpath(locator));
+        action.sendKeys(element, key1, key2).perform();
+    }
+    public void sendKeyBoardToOpenNewTab(String locator) {
+        String clicklnk = Keys.chord(Keys.CONTROL,Keys.ENTER);
+        element = driver.findElement(By.xpath(locator));
+        element.sendKeys(clicklnk);
+    }
+
+    public void rightClickElement(String locator) {
+        element = driver.findElement(By.xpath(locator));
+        action.contextClick(element).perform();
+    }
+    public void rightClickElementKey(String locator, Keys key1, Keys key2) {
+        element = driver.findElement(By.xpath(locator));
+        action.contextClick(element).sendKeys(key1).sendKeys(key2).build().perform();
     }
 
     public static String getElementText(By by) {
